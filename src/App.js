@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/main.css';
+import { Routes, Route } from 'react-router-dom';
+import { Outlet, NavLink } from "react-router-dom";
+import Iframes from './components/Iframes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='homepage maindiv'>
+      <header>
+       
+      <div className="container-column">
+        <h2 is="top">
+            Zaria's   
+          </h2>
+          <h2>
+            Scratch projects
+          </h2>
+      </div>
+      <Routes>           
+            <Route index element= {<h1>Hello</h1>} />
+            <Route path='/' element= {<h1>Hello</h1>} />       
+      </Routes>
+       
       </header>
+        < Iframes />
+
+        {/* <NavLink className="back" to="/">
+         <button>&uarr;back to top</button> 
+        </NavLink> */}
+       
     </div>
+    
   );
 }
 

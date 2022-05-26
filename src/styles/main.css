@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 12vh;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  background-color: black;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, #030b2c), color-stop(70%, #8181dc), color-stop(130%, #dcd5ee)) no-repeat;
+  background: linear-gradient(180deg, #030b2c 8%, #8181dc 70%, #dcd5ee 130%) no-repeat;
+}
+
+h2 {
+  color: transparent;
+  font-size: 5rem;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  background: linear-gradient(140deg, #fada4b 5% 10%, #ebff3b 12% 25%, #f9e231 27% 57%, #fbe5a9 57% 68%, #ffe730 68% 90%, #ebff3b 92% 100%) no-repeat;
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-animation: shimmer 3s ease-in infinite;
+          animation: shimmer 3s ease-in infinite;
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: 0% 10%;
+  }
+  20% {
+    background-position: 20% 15%;
+  }
+  30% {
+    background-position: 30% 20%;
+  }
+  50% {
+    background-position: 50% 25%;
+  }
+  60% {
+    background-position: 60% 30%;
+  }
+  80% {
+    background-position: 70% 30%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 10%;
+  }
+  20% {
+    background-position: 20% 15%;
+  }
+  30% {
+    background-position: 30% 20%;
+  }
+  50% {
+    background-position: 50% 25%;
+  }
+  60% {
+    background-position: 60% 30%;
+  }
+  80% {
+    background-position: 70% 30%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+}
+
+.container-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+}
+
+.thumbnail {
+  margin: 2vh;
+  width: 40vh;
+  height: 30vh;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=main.css.map */
