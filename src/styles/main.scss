@@ -7,7 +7,7 @@
 }
 
 html{
-    height: 12vh;
+    height: 120vh;
     scroll-behavior: smooth;
     font-size: 62.5%;
     background-color: black;
@@ -70,6 +70,16 @@ h2{
       
       }
 }
+
+button{
+  background-color: $gold1;
+  border:none;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  position: fixed;
+  font-size: 2rem;
+}
+
 
 .container {
     @include flex(row, center, center);
