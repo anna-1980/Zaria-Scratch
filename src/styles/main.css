@@ -7,12 +7,13 @@
 }
 
 html {
-  height: 100;
   scroll-behavior: smooth;
   font-size: 62.5%;
-  padding-bottom: 4rem;
+  padding-bottom: 10rem;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, #030b2c), color-stop(30%, #8181dc), color-stop(50%, #dcd5ee), color-stop(70%, #8181dc), to(#030b2c)) no-repeat;
   background: linear-gradient(180deg, #030b2c 8%, #8181dc 30%, #dcd5ee 50%, #8181dc 70%, #030b2c 100%) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h2 {
