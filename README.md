@@ -1,3 +1,8 @@
+A website for my daughter, so she can share her Scratch projects with our low-tech family members :)
+
+https://zaria-scratch-projects.netlify.app/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
