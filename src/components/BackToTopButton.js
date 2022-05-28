@@ -28,7 +28,7 @@ const BackToTopButton = () => {
     <div className='container'>
          {
              backToTopButton && (
-                <button onClick={scrollUp}> Back to top</button>
+                <button onClick={scrollUp} className="scrollButton"> Back to top</button>
              )
          }
         
