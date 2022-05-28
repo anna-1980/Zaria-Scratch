@@ -35,7 +35,7 @@ function App() {
           </h2>
       </div>
       <Routes>           
-            <Route index element= {<h1></h1>} />
+            <Route index element= { < Iframes />} />
             <Route path='/home' element= {< Iframes  projects={projects}/>} />       
             <Route path='/singleProject/*' element= {<SingleProject  projects={projects}/>} />       
       </Routes>
