@@ -7,17 +7,17 @@
 }
 
 html{
-    height: 120vh;
+    height: 100;
     scroll-behavior: smooth;
     font-size: 62.5%;
-    background-color: black;
+    padding-bottom: 4rem;
     background: linear-gradient(180deg, 
     
     $color1 8%, 
+    $color2 30%,
+    $color3  50%, 
     $color2 70%,
-    $color3  130%, 
-     
-
+    $color1 100%,
     ) no-repeat;
 }
 
@@ -73,16 +73,25 @@ h2{
 }
 
 button{
+  
   background-color: $gold1;
-  border:none;
   border-radius: 10px;
   padding: 1rem 2rem;
-  position: fixed;
   font-size: 2rem;
+  z-index: 1;
+  cursor: grabbing;
+}
+.scrollButton{
+  position: fixed;
+  border:1px solid rgb(237, 83, 83);
+  top:25vh;
+  right: 2rem;  
+  box-shadow: 2px 2px 8px(black);
 }
 
 #singleProjectContainer, .container{
   position: relative;
+  
   // background-color: red;
 }
 
@@ -90,6 +99,7 @@ button{
   position: absolute;
   top:54vh;
   right:50vw;
+  border:none;
   cursor: grab;
   z-index: 1;
   transform-origin: right;
