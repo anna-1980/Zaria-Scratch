@@ -5,16 +5,26 @@ import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 
 const Iframes = ({projects}) => {
- 
-
-
+  // {
+  //   projects.map(({author, _id, url, description, title}) => {
+  //     console.log(url)
+  //   })
+  // }
+  let projectNumber = [];
+  let url = `${
+    projects.map(({author, _id, url, description, title}) => {
+      return  projectNumber.push(url.split('/')[4]) 
+    })
+  }`;
+  console.log(projectNumber)
   let params = useParams();
   let location = useLocation();
   let navigate = useNavigate();
-  console.log(projects);
+  // console.log(projectNumber);
+  // console.log(url);
   let _id = `646527705`
   // let url = `https://scratch.mit.edu/projects/695288431/embed`
-  let url = `https://science-arcade.netlify.app/Games`
+  // let url = `https://science-arcade.netlify.app/Games`
 
   return (
     <div>
@@ -33,7 +43,7 @@ const Iframes = ({projects}) => {
 
          
             <div className="container">
-            {projects.map((id) => {
+            {projectNumber.map((id) => {
               return (
                  
                 <Link to={ `/singleProject/${id}` } key={_id}>

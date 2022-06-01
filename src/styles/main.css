@@ -165,4 +165,17 @@ iframe {
   cursor: pointer;
   border: 2px solid #3a29be;
 }
+
+.logo {
+  display: inline-block;
+  margin-left: 2rem;
+  background-color: red;
+  background-size: cover;
+  background-image: url("../../public/favIcon.png");
+  height: 64px;
+  width: 64px;
+  z-index: 3;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+}
 /*# sourceMappingURL=main.css.map */
