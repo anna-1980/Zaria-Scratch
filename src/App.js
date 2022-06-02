@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     const getProjects = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/projects/");
+      const { data } = await axios.get("http://localhost:5000/api/projects/");
       setLoading(true);
       setProjects(data);
       console.log(`get all games: ${data}`);
@@ -59,12 +59,17 @@ function App() {
           <h2>
             Scratch projects
           </h2>
+         
           
       </div>
       <Routes>           
             <Route index element= {< Iframes projects={projects}/>} />
             <Route path='/home' element= {< Iframes  projects={projects}  />} />       
-            <Route path='/singleProject/*' element= {<SingleProject  projects={projects} setProjects={setProjects} setLoading = {setLoading} loading= {loading}/>} />       
+            <Route path='/singleProject/*' element= {<SingleProject  
+            projects={projects} 
+            setProjects={setProjects} 
+            setLoading = {setLoading} 
+            loading= {loading}/>} />       
       </Routes>
        
       </header>
