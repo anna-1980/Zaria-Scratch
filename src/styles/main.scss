@@ -23,8 +23,6 @@ html{
     background-attachment: fixed;
 }
 
-
-
 h2{
     color: transparent;
     font-size: 4.5rem;
@@ -133,4 +131,19 @@ button{
       padding: 0.5rem;
       cursor: pointer;
       border: 2px solid rgb(58, 41, 190);
+  }
+
+  .logo{
+    // position: absolute;
+    display: inline-block;
+    margin-left: 2rem;
+    // top: 5px;
+    // right: 5px;
+    background-color: red;
+    background-size: cover;
+    background-image: url('../../public/favIcon.png');
+    height: 64px;
+    width: 64px;
+    z-index: 3;
+    transform: translateY(15px);
   }
