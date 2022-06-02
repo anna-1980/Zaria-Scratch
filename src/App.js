@@ -32,7 +32,8 @@ function App() {
   useEffect(() => {
     const getProjects = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/projects/");
+      // const { data } = await axios.get("http://localhost:5000/api/projects/");
+      const { data } = await axios.get("https://sleepy-sea-73067.herokuapp.com/api/projects");
       setLoading(true);
       setProjects(data);
       console.log(`get all games: ${data}`);
