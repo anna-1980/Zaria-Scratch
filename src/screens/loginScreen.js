@@ -32,7 +32,7 @@ const loginScreen = () => {
             </h5>
           </div>
           <button type='submit' className='submitButton' >
-           submit
+           Sign in
           </button>
         </form>
 

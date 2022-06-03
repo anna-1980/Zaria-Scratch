@@ -27,7 +27,7 @@ const registerScreen = () => {
             </div>
             <div className='textAlignCenter'>
                 <h5>
-                Have an account? <Link to='/signin'>Log in</Link> 
+                Have an account? <Link to='/signin'>Sign in</Link> 
                 </h5>
             </div>
             <button type='submit' className='submitButton' >

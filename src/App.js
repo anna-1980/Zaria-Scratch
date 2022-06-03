@@ -8,6 +8,9 @@ import BackToTopButton from './components/BackToTopButton';
 import SingleProject from './components/SingleProject';
 import LoginScreen from './screens/loginScreen';
 import RegisterScreen from './screens/registerScreen';
+import NotFound from './screens/NotFound'
+import UserProfile from './screens/UserProfile';
+import NewProject from './screens/NewProject';
 
 function App() {
 
@@ -65,15 +68,20 @@ function App() {
           
       </div>
       <Routes>           
-            <Route index element= {< Iframes projects={projects}/>} />
-            <Route path='/home' element= {< Iframes  projects={projects}  />} />       
-            <Route path='/singleProject/*' element= {<SingleProject  
-            projects={projects} 
-            setProjects={setProjects} 
-            setLoading = {setLoading} 
-            loading= {loading}/>} /> 
-            <Route path='/signin' element={<LoginScreen />}/>      
-            <Route path='/register' element={<RegisterScreen />}/>      
+            <Route path='/'/>
+              <Route index element= {< Iframes projects={projects}/>} />
+              <Route path='/home' element= {< Iframes  projects={projects}  />} />       
+              <Route path='/singleProject/*' element= {<SingleProject  
+              projects={projects} 
+              setProjects={setProjects} 
+              setLoading = {setLoading} 
+              loading= {loading}/>} /> 
+              <Route path='/signin' element={<LoginScreen />}/>      
+              <Route path='/register' element={<RegisterScreen />}/>      
+              <Route path='/userProfile' element={<UserProfile />}> 
+                  <Route path='/userProfile/upload' element={<NewProject />}/>
+              </Route>
+              <Route path='*' element={<NotFound />}/>      
       </Routes>
        
       </header>
