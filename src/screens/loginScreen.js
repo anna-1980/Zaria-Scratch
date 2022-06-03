@@ -9,32 +9,36 @@ const loginScreen = () => {
   
   return (
     <> 
+    <div className='spacer4rem'></div>
      <Link to={`/home`} >
             <button id='goBack'>Go Back</button>
             </Link>
         <form  autoComplete='off'>
-          <div>
+          <div className='formFields'>
             <label htmlFor='email' >
               Email:
             </label>
             <input type='email'/>
           </div>
-          <div>
+          <div className='formFields'>
             <label htmlFor='password'  >
               Password:
             </label>
             <input type='password'/>
           </div>
-          <div>
-            <small>
+          <div className='textAlignCenter'>
+            <h5>
               Don't have an account? <Link to='/register'>Register</Link> instead
-            </small>
+            </h5>
           </div>
-          <button type='submit'  >
-            Log in
+          <button type='submit' className='submitButton' >
+           submit
           </button>
         </form>
 
+    <Link to={`/home`} >
+        <button id='goBack'>Go Back</button>
+    </Link>
 
     </>
   )

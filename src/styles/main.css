@@ -1,11 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&display=swap");
 form {
+  font-family: 'Roboto Slab', serif;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: #8181dc;
   color: white;
   font-size: 2rem;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+label {
+  margin: 0.5rem;
+}
+
+.formFields {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+input {
+  width: 100%;
 }
 
 button {
-  position: absolute;
   border: none;
   cursor: -webkit-grabbing;
   cursor: grabbing;
@@ -15,6 +60,8 @@ button {
   padding: 1rem 2rem;
   font-size: 2rem;
   z-index: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .scrollButton {
@@ -27,14 +74,13 @@ button {
 }
 
 #goBack {
+  position: absolute;
   top: 54vh;
   right: 50vw;
   -webkit-transform-origin: right;
           transform-origin: right;
   -webkit-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 #goBack:hover {
@@ -44,13 +90,31 @@ button {
 }
 
 .signInButton {
+  position: absolute;
   background-color: #8181dc;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  right: 50vw;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
 }
 
 .signInButton:hover {
-  border: 1px solid #dcd5ee;
+  border: 2px solid #dcd5ee;
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
+}
+
+.submitButton {
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  background-color: #eba31f;
+}
+
+.submitButton:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #ea5436;
   -webkit-box-shadow: 2px 2px 4px black;
           box-shadow: 2px 2px 4px black;
 }
@@ -72,6 +136,11 @@ html {
   background-attachment: fixed;
 }
 
+h1 {
+  color: #fada4b;
+  margin: 1rem 0;
+}
+
 h2 {
   color: transparent;
   font-size: 4.5rem;
@@ -82,6 +151,16 @@ h2 {
   -webkit-background-clip: text;
   -webkit-animation: shimmer 1.5s linear infinite;
           animation: shimmer 1.5s linear infinite;
+}
+
+h5 {
+  font-weight: 500;
+}
+
+.textAlignCenter {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
 }
 
 @-webkit-keyframes shimmer {
@@ -130,6 +209,31 @@ h2 {
   100% {
     background-position: 100% 50%;
   }
+}
+
+div {
+  margin: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.spacer2rem {
+  margin-top: 2rem;
+}
+
+.spacer4rem {
+  margin-top: 4rem;
 }
 
 #singleProjectContainer, .container {

@@ -80,9 +80,7 @@ function App() {
         {/* < Iframes /> */}
 
         <BackToTopButton />   
-        <Link to={`/signin`}>
-          <button  className='signInButton'>Sign In</button>
-        </Link>
+     
     </div>
     
   );

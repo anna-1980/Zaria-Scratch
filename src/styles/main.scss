@@ -25,6 +25,11 @@ html{
     background-attachment: fixed;
 }
 
+h1{
+  color: $gold1;
+  margin: 1rem 0;
+}
+
 h2{
     color: transparent;
     font-size: 4.5rem;
@@ -40,6 +45,16 @@ h2{
         background-size:200% 200%;
     -webkit-background-clip: text;
     animation: shimmer 1.5s linear infinite ;
+}
+
+h5{
+  font-weight: 500;
+}
+
+.textAlignCenter{
+  width: 100%;
+  display: inline-block;
+  text-align: center;
 }
 
 @keyframes shimmer {
@@ -74,6 +89,18 @@ h2{
       }
 }
 
+
+div{
+  margin: 0.5rem;
+  @include flex(row, center, center);
+}
+
+.spacer2rem{
+  margin-top: 2rem;
+}
+.spacer4rem{
+  margin-top: 4rem;
+}
 
 
 #singleProjectContainer, .container{

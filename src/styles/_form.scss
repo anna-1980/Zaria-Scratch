@@ -1,4 +1,25 @@
 form{
+    font-family: 'Roboto Slab', serif;
+    height: 100%;
+    width: 100%;
+    @include flex(column, center, flex-start);
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: $color2;
     color: white;
     font-size: 2rem;
+    box-shadow: $boxShadow;
+    
+}
+
+label{
+    margin: 0.5rem;
+}
+
+.formFields{
+    width: 95%;
+    @include flex(row, space-between, center);
+}
+input{
+    width: 100%;
 }

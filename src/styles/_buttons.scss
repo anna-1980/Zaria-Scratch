@@ -1,5 +1,5 @@
 button{
-    position: absolute;
+   
     border:none;
     cursor: grabbing;
     z-index: 1;
@@ -8,7 +8,7 @@ button{
     padding: 1rem 2rem;
     font-size: 2rem;
     z-index: 1;
-    
+    transition: 0.3s;
   }
 
   .scrollButton{
@@ -20,6 +20,7 @@ button{
   }
 
   #goBack{
+    position: absolute;
     top:54vh;
     right:50vw;
     transform-origin: right;
@@ -28,14 +29,29 @@ button{
         border: 1px solid $gold4;
         box-shadow: 2px 2px 4px black;
     }
-    transition: 0.3s;
+  
   }
 
   .signInButton{
+    position: absolute;
     background-color: $color2;
+    right:50vw;
+    transform-origin: right;
+    transform: translate(50%, 50%);
      &:hover{
-         border: 1px solid $color3;
+         border: 2px solid $color3;
          box-shadow: 2px 2px 4px black;
      }
-    transition: 0.3s;
+   
+  }
+
+  .submitButton{
+      margin:1rem auto ;
+      padding: 0.5rem 1rem;
+      background-color: $standoutOrange;
+      &:hover{
+        transform: scale(1.1);
+        background-color: $standoutRed;
+        box-shadow: 2px 2px 4px black;
+    }
   }
