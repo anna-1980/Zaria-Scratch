@@ -6,7 +6,7 @@ const registerScreen = () => {
     <>
     <h1 className='spacer4rem'>Registration</h1>
      
-        <form  autoComplete='off'>
+        <form  className='registrationForm' autoComplete='off'>
             <div className='formFields'>
                 <label htmlFor='Name' >
                 Name:

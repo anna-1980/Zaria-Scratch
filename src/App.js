@@ -78,7 +78,7 @@ function App() {
               loading= {loading}/>} /> 
               <Route path='/signin' element={<LoginScreen />}/>      
               <Route path='/register' element={<RegisterScreen />}/>      
-              <Route path='/userProfile' element={<UserProfile />}> 
+              <Route path='/userProfile' element={<UserProfile />}> // protected route
                   <Route path='/userProfile/upload' element={<NewProject />}/>
               </Route>
               <Route path='*' element={<NotFound />}/>      

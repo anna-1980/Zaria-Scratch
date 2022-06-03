@@ -16,6 +16,10 @@ label{
     margin: 0.5rem;
 }
 
+.registrationForm{
+   border: 2px solid ; 
+}
+
 .formFields{
     width: 95%;
     @include flex(row, space-between, center);

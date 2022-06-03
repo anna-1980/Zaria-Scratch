@@ -21,12 +21,16 @@ form {
   background-color: #8181dc;
   color: white;
   font-size: 2rem;
-  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 label {
   margin: 0.5rem;
+}
+
+.registrationForm {
+  border: 2px solid;
 }
 
 .formFields {
@@ -100,7 +104,7 @@ button {
 }
 
 .signInButton:hover {
-  border: 2px solid #dcd5ee;
+  border: 2px solid #b1afe1;
   -webkit-box-shadow: 2px 2px 4px black;
           box-shadow: 2px 2px 4px black;
 }
@@ -131,8 +135,8 @@ html {
   font-size: 62.5%;
   font-family: 'Roboto Slab', serif;
   padding-bottom: 10rem;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, #030b2c), color-stop(30%, #8181dc), color-stop(50%, #dcd5ee), color-stop(70%, #8181dc), to(#030b2c)) no-repeat;
-  background: linear-gradient(180deg, #030b2c 8%, #8181dc 30%, #dcd5ee 50%, #8181dc 70%, #030b2c 100%) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, #030b2c), color-stop(30%, #8181dc), color-stop(49%, #b1afe1), color-stop(60%, #8181dc), to(#030b2c)) no-repeat;
+  background: linear-gradient(180deg, #030b2c 8%, #8181dc 30% 40%, #b1afe1 49% 52%, #8181dc 60% 70%, #030b2c 100%) no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
