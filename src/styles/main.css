@@ -1,4 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&display=swap");
+form {
+  color: white;
+  font-size: 2rem;
+}
+
+button {
+  position: absolute;
+  border: none;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  z-index: 1;
+  background-color: #fada4b;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  z-index: 1;
+}
+
+.scrollButton {
+  position: fixed;
+  border: 1px solid #ed5353;
+  bottom: 35vh;
+  right: 2rem;
+  -webkit-box-shadow: 2px 2px 8px black;
+          box-shadow: 2px 2px 8px black;
+}
+
+#goBack {
+  top: 54vh;
+  right: 50vw;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#goBack:hover {
+  border: 1px solid #fbe5a9;
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
+}
+
+.signInButton {
+  background-color: #8181dc;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.signInButton:hover {
+  border: 1px solid #dcd5ee;
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -76,41 +132,8 @@ h2 {
   }
 }
 
-button {
-  background-color: #fada4b;
-  border-radius: 10px;
-  padding: 1rem 2rem;
-  font-size: 2rem;
-  z-index: 1;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.scrollButton {
-  position: fixed;
-  border: 1px solid #ed5353;
-  bottom: 35vh;
-  right: 2rem;
-  -webkit-box-shadow: 2px 2px 8px black;
-          box-shadow: 2px 2px 8px black;
-}
-
 #singleProjectContainer, .container {
   position: relative;
-}
-
-#goBack {
-  position: absolute;
-  top: 54vh;
-  right: 50vw;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  z-index: 1;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
 }
 
 .container {

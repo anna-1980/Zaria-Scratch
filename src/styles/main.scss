@@ -1,4 +1,6 @@
 @import "variables.scss";
+@import "form.scss";
+@import "buttons.scss";
 
 *{
     margin: 0;
@@ -72,22 +74,7 @@ h2{
       }
 }
 
-button{
-  
-  background-color: $gold1;
-  border-radius: 10px;
-  padding: 1rem 2rem;
-  font-size: 2rem;
-  z-index: 1;
-  cursor: grabbing;
-}
-.scrollButton{
-  position: fixed;
-  border:1px solid rgb(237, 83, 83);
-  bottom:35vh;
-  right: 2rem;  
-  box-shadow: 2px 2px 8px(black);
-}
+
 
 #singleProjectContainer, .container{
   position: relative;
@@ -95,16 +82,7 @@ button{
   // background-color: red;
 }
 
-#goBack{
-  position: absolute;
-  top:54vh;
-  right:50vw;
-  border:none;
-  cursor: grab;
-  z-index: 1;
-  transform-origin: right;
-  transform: translate(50%, 50%);
-}
+
 
 
 .container {

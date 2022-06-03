@@ -1,12 +1,13 @@
 import './styles/main.css';
 import { Routes, Route } from 'react-router-dom';
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import axios from 'axios';
 import Iframes from './components/Iframes';
 import BackToTopButton from './components/BackToTopButton';
 import SingleProject from './components/SingleProject';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useEffect, useState } from "react";
+import LoginScreen from './screens/loginScreen';
+import RegisterScreen from './screens/registerScreen';
 
 function App() {
 
@@ -70,14 +71,18 @@ function App() {
             projects={projects} 
             setProjects={setProjects} 
             setLoading = {setLoading} 
-            loading= {loading}/>} />       
+            loading= {loading}/>} /> 
+            <Route path='/signin' element={<LoginScreen />}/>      
+            <Route path='/register' element={<RegisterScreen />}/>      
       </Routes>
        
       </header>
         {/* < Iframes /> */}
 
         <BackToTopButton />   
-       
+        <Link to={`/signin`}>
+          <button  className='signInButton'>Sign In</button>
+        </Link>
     </div>
     
   );
