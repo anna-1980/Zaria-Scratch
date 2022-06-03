@@ -8,8 +8,9 @@ const LoginScreen = () => {
   const onSubmit = async (data) => {
       
     try {
-      const { data:{token} } = await axios.post(`${process.env.SCRATCH_PROJECTS_ACCESS}/auth/signup`, data)
-      console.log(token);
+      const { data:{userName} } = await axios.post(`${process.env.REACT_APP_API}/api/auth/me`, data)
+      console.log(data);
+      // localStorage.setItem('accessToken', JSON.stringify(token));
     }catch (error){
       console.log(error);
     }

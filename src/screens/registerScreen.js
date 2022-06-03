@@ -2,20 +2,19 @@ import React from 'react'
 import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import { useAuth } from '../context/AuthContext';
+
 
 const RegisterScreen = () => {
  
   const {register, handleSubmit, watch, formState: {errors}} = useForm();
   const userError =  errors.name && <div className='formValidation'>name is required</div> ;
-  const onSubmit = async (data) => {
+  
+  const {signup} = useAuth();
+  
+  const onSubmit = (formData) => signup(formData);
     
-    try {
-      const { data:{token} } = await axios.post(`${process.env.REACT_APP_API}/api/auth/signup`, data)
-      console.log(token);
-    }catch (error){
-      console.log(error);
-    }
-  }
+
   return (
     <>
     <h1 className='spacer4rem'>Registration</h1>

@@ -1,11 +1,14 @@
 import { Outlet, Link, useLocation, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useAuth } from '../context/AuthContext';
 
 const UserProfile = () => {
 
 let location = useLocation();
 let displayButton = location.pathname !== `/userProfile/upload`
-const isAuthenticated = true;
+console.log( useAuth );
+const {isAuthenticated} = useAuth();
+// const isAuthenticated = true;
  
   return (
     <> 
