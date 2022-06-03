@@ -6,22 +6,14 @@ import axios from 'axios';
 import Iframes from './components/Iframes';
 import BackToTopButton from './components/BackToTopButton';
 import SingleProject from './components/SingleProject';
-import LoginScreen from './screens/loginScreen';
-import RegisterScreen from './screens/registerScreen';
+import LoginScreen from './screens/LoginScreen';
+import RegisterScreen from './screens/RegisterScreen';
 import NotFound from './screens/NotFound'
 import UserProfile from './screens/UserProfile';
 import NewProject from './screens/NewProject';
 
 function App() {
-
-  // const [projects, setProjects] = useState([
-  //   '699241050',
-  //   '566020141',
-  //   '585075144',
-  //   '683124108',
-  //   '697898958',
-  //   '695288431', 
-  //   '646527705'])  
+   
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(false);
 

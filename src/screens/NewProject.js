@@ -1,4 +1,3 @@
-import React from 'react'
 import { Outlet, Link } from "react-router-dom";
 
 const NewProject = () => {
@@ -12,7 +11,7 @@ const NewProject = () => {
                 <label htmlFor='Title' >
                 Title:
                 </label>
-                <input type='text'/>
+                <input type='text' />
             </div>
             <div className='formFields'>
                 <label htmlFor='description' >

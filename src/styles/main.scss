@@ -14,13 +14,11 @@ html{
     font-size: 62.5%;
     font-family: 'Roboto Slab', serif;
     padding-bottom: 10rem;
-    background: linear-gradient(180deg, 
+    background: linear-gradient(160deg, 
     
     $color1 8%, 
-    $color2 30% 40%,
-    $color3  49% 52%, 
-    $color2 60% 70%,
-    $color1 100%,
+    $color2 60% 30%,
+    $color3  100%, 
     ) no-repeat;
     background-size: cover;
     background-attachment: fixed;

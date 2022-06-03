@@ -1,11 +1,19 @@
-import React from 'react'
+import { useEffect, useState } from "react";
 import { useForm } from 'react-hook-form';
 import { useLocation, Link, Navigate } from 'react-router-dom';
-// import { useAuth } from '../context/AuthContext';
+import axios from 'axios'; 
 
-const loginScreen = () => {
-    // let location = useLocation();
-   
+const LoginScreen = () => {
+  const {register, handleSubmit, watch, formState: {errors}} = useForm();
+  const onSubmit = async (data) => {
+      
+    try {
+      const { data:{token} } = await axios.post(`${process.env.SCRATCH_PROJECTS_ACCESS}/auth/signup`, data)
+      console.log(token);
+    }catch (error){
+      console.log(error);
+    }
+  }
   
   return (
     <> 
@@ -13,18 +21,20 @@ const loginScreen = () => {
      <Link to={`/home`} >
             <button id='goBack'>Go Back</button>
             </Link>
-        <form  autoComplete='off'>
+        <form  autoComplete='off' onSubmit={handleSubmit(onSubmit)}>
           <div className='formFields'>
             <label htmlFor='email' >
               Email:
             </label>
-            <input type='email'/>
+            <input type='email' className={errors.email ? 'inputError' : 'input'}{...register('email', {required: true})}/>
+            {errors.email && <div className='formValidation'>Email is required </div>}
           </div>
           <div className='formFields'>
             <label htmlFor='password'  >
               Password:
             </label>
-            <input type='password'/>
+             <input type='password' className={errors.password ? 'inputError' : 'input'} {...register('password', {required: true})}/>
+                {errors.password && <div className='formValidation'>Password id required</div>}
           </div>
           <div className='textAlignCenter'>
             <h5>
@@ -44,4 +54,23 @@ const loginScreen = () => {
   )
 }
 
-export default loginScreen
+export default LoginScreen
+
+// const [loading, setLoading] = useState(false);
+// const [user, setUser] = useState({});
+
+// useEffect(() => {
+//   const getUser = async () => {
+//   try {
+//     // const { data } = await axios.get("http://localhost:5000/api/projects/");
+//     const { data } = await axios.get("https://sleepy-sea-73067.herokuapp.com/api/auth/signin");
+//     setLoading(true);
+//     setUser(data);
+//     console.log(`get the user: ${data}`);
+//     setLoading(false);
+//   } catch (error) {
+//     return alert ("Sorry something went wrong getting your details")
+//   }
+// };
+// getUser();
+// }, []);

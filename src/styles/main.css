@@ -18,7 +18,7 @@ form {
           align-items: flex-start;
   padding: 0.5rem;
   border-radius: 10px;
-  background-color: #8181dc;
+  background-color: #7777cb;
   color: white;
   font-size: 2rem;
   -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
@@ -48,10 +48,32 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 input {
+  border-radius: 2px;
+  border-color: none;
+  font-size: 1.6rem;
+  padding: 0.2rem;
   width: 100%;
+}
+
+input:focus {
+  outline: 2px solid white;
+}
+
+.formValidation {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  color: #f83798;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.inputError {
+  border: 2px solid red;
 }
 
 button {
@@ -95,7 +117,7 @@ button {
 
 .signInButton {
   position: absolute;
-  background-color: #8181dc;
+  background-color: #7777cb;
   right: 50vw;
   -webkit-transform-origin: right;
           transform-origin: right;
@@ -104,7 +126,7 @@ button {
 }
 
 .signInButton:hover {
-  border: 2px solid #b1afe1;
+  border: 2px solid #9693d8;
   -webkit-box-shadow: 2px 2px 4px black;
           box-shadow: 2px 2px 4px black;
 }
@@ -135,8 +157,7 @@ html {
   font-size: 62.5%;
   font-family: 'Roboto Slab', serif;
   padding-bottom: 10rem;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, #030b2c), color-stop(30%, #8181dc), color-stop(49%, #b1afe1), color-stop(60%, #8181dc), to(#030b2c)) no-repeat;
-  background: linear-gradient(180deg, #030b2c 8%, #8181dc 30% 40%, #b1afe1 49% 52%, #8181dc 60% 70%, #030b2c 100%) no-repeat;
+  background: linear-gradient(160deg, #030b2c 8%, #7777cb 60% 30%, #9693d8 100%) no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
