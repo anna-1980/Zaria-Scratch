@@ -54,7 +54,7 @@ const RegisterScreen = () => {
             submit
             </button>
             </form>
-     {token && <Navigate to="/signin"/> }
+     {token && <Navigate to="/userProfile"/> }
     <Link to={`/home`} >
             <button id='goBack'>Go Back</button>
             </Link>
