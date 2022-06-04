@@ -8,7 +8,7 @@ export const useAuth = () => useContext(AuthContext);
 const AuthState = ({children}) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [user, setUser] = useState();
-    const [token, setToken] = useState(localStorage.getItem('token'));
+    const [token, setToken] = useState();
     const [loading, setLoading] = useState(false);
    
     const signup = async  formData  => {
@@ -17,15 +17,17 @@ const AuthState = ({children}) => {
         const {
           data: { token }
         } = await axios.post(`${process.env.REACT_APP_API}/api/auth/signup`, formData);
-        
+        setToken(token)
       } catch (error) {
       //   toast.error(error.response?.data.error || error.message);
         console.log(error);
       }
+     
+    
     };
    
    
-    return <AuthContext.Provider value={{isAuthenticated, signup}}>{children}</AuthContext.Provider>
+    return <AuthContext.Provider value={{isAuthenticated, signup, token}}>{children}</AuthContext.Provider>
 
 
 

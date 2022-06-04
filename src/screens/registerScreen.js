@@ -1,20 +1,21 @@
 import React from 'react'
-import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { Link, NavLink, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 
 
 const RegisterScreen = () => {
- 
+  const navigate = useNavigate();
   const {register, handleSubmit, watch, formState: {errors}} = useForm();
   const userError =  errors.name && <div className='formValidation'>name is required</div> ;
   
-  const { isAuthenticated, signup } = useAuth();
+  const { isAuthenticated, signup, token } = useAuth();
   
   const onSubmit = (formData) => signup(formData);
     
-
+  console.log(`something`);
+  console.log(token);
   return (
     <>
     <h1 className='spacer4rem'>Registration</h1>
@@ -53,7 +54,7 @@ const RegisterScreen = () => {
             submit
             </button>
             </form>
-     
+     {token && <Navigate to="/signin"/> }
     <Link to={`/home`} >
             <button id='goBack'>Go Back</button>
             </Link>
