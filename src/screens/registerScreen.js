@@ -10,7 +10,7 @@ const RegisterScreen = () => {
   const {register, handleSubmit, watch, formState: {errors}} = useForm();
   const userError =  errors.name && <div className='formValidation'>name is required</div> ;
   
-  const {signup} = useAuth();
+  const { isAuthenticated, signup } = useAuth();
   
   const onSubmit = (formData) => signup(formData);
     

@@ -10,23 +10,30 @@ const AuthState = ({children}) => {
     const [user, setUser] = useState();
     const [token, setToken] = useState(localStorage.getItem('token'));
     const [loading, setLoading] = useState(false);
-   return <AuthContext.Provider value={{isAuthenticated}}>{children}</AuthContext.Provider>
-}
+   
+    const signup = async  formData  => {
+      try {
+         
+        const {
+          data: { token }
+        } = await axios.post(`${process.env.REACT_APP_API}/api/auth/signup`, formData);
+        
+      } catch (error) {
+      //   toast.error(error.response?.data.error || error.message);
+        console.log(error);
+      }
+    };
+   
+   
+    return <AuthContext.Provider value={{isAuthenticated, signup}}>{children}</AuthContext.Provider>
 
-const signup = async formData => {
-    try {
-       
-      const {
-        data: { token }
-      } = await axios.post(`${process.env.REACT_APP_API}/api/auth/signup`, formData);
-      
-    } catch (error) {
-    //   toast.error(error.response?.data.error || error.message);
-      console.log(error);
-    }
-  };
+
+
+  }
+
+
 
    
  
 
-export default AuthState
+export default AuthState;

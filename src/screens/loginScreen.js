@@ -8,7 +8,7 @@ const LoginScreen = () => {
   const onSubmit = async (data) => {
       
     try {
-      const { data:{userName} } = await axios.post(`${process.env.REACT_APP_API}/api/auth/me`, data)
+      const { data:{userName, body, user} } = await axios.get(`${process.env.REACT_APP_API}/api/auth/me`, data)
       console.log(data);
       // localStorage.setItem('accessToken', JSON.stringify(token));
     }catch (error){
