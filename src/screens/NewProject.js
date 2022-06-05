@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, Navigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../context/AuthContext';
 import { useEffect } from "react";
@@ -6,11 +6,13 @@ import { useEffect } from "react";
 const NewProject = () => {
     const {register, handleSubmit, watch, formState: {errors}} = useForm();
    
-  const onSubmit = (formData) => newProject(formData);
-//   const onSubmit = (formData) => console.log(formData);
-  const { isAdmin, newProject  } = useAuth();
-  
+  const onSubmit = (formData) => {
+      newProject(formData)
+      return <Navigate to="/home"/>};
  
+  const {  newProject, uploaded  } = useAuth();
+  
+   if (uploaded) return <Navigate to="/home"/>;
    
   return (
     <div className="container-column">
@@ -36,10 +38,11 @@ const NewProject = () => {
                 </label>
                 <input type='text'{...register('url', {required: true})}/>
             </div>
-           
+             
             <button type='submit' className='submitButton' >
             submit
             </button>
+             
             <Link to={`/userProfile`} >
                 <button className='backToUserProfile' >
                 &#x003C;  

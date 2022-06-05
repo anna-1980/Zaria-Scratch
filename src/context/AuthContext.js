@@ -14,6 +14,8 @@ const AuthState = ({children}) => {
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [isAdmin, setIsAdmin] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [uploaded, setUploaded] = useState(false);
+  
   //to persist loggedIn user on refresh of the page, so when components mount again you have to put retrieving user data and token in useEffect, so it happens again on component mount
  
  
@@ -112,9 +114,9 @@ const AuthState = ({children}) => {
         { headers: { Authorization: token}});
         console.log(data);
         setLoading(false); 
-        // console.log( { AuthContext: { token} });
+        setUploaded(true);
       } catch (error) {
-      //   toast.error(error.response?.data.error || error.message);
+        toast.error(error.response?.data.error || error.message);
         console.log(error);
         setLoading(false);
        
@@ -126,7 +128,7 @@ const AuthState = ({children}) => {
 
     // provider allows you to wrap anycomponents and every child component has access to the data
     //all routes in App.js are now wrapped in AuthState component which provides the CONTEXT
-    return <AuthContext.Provider value={{isAuthenticated, signup, signin, signout , user, loading, token, isAdmin, newProject}}>{children}</AuthContext.Provider>
+    return <AuthContext.Provider value={{isAuthenticated, signup, signin, signout , user, loading, token, isAdmin, newProject, uploaded}}>{children}</AuthContext.Provider>
 
 
 

@@ -149,13 +149,17 @@ button {
           box-shadow: 2px 2px 4px black;
 }
 
+#hideMe {
+  z-index: -1;
+}
+
 .loggout {
   -webkit-transform-origin: right;
           transform-origin: right;
   background-color: transparent;
   border: 2px solid transparent;
   color: pink;
-  font-size: 2rem;
+  font-size: 1.8rem;
   -webkit-transform: translate(5%, 5%);
           transform: translate(5%, 5%);
 }
@@ -349,8 +353,9 @@ h2 {
 }
 
 h3 {
-  color: azure;
-  font-size: 3rem;
+  padding-left: 0.6rem;
+  color: #fada4b;
+  font-size: 2rem;
 }
 
 h4 {
@@ -380,7 +385,7 @@ h4 {
   border-radius: 10px;
   padding-left: 2rem;
   padding-top: 1.5rem;
-  padding-right: 2.2rem;
+  padding-right: 1rem;
   padding-bottom: 1.5rem;
 }
 

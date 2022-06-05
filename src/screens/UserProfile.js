@@ -16,13 +16,16 @@ const {isAuthenticated, user, token, isAdmin } = useAuth();
 const isAdminLoggedIn = isAdmin ;
 // const isAdminLoggedIn = localStorage.getItem('isAdmin') 
 // ? JSON.parse(localStorage.getItem('isAdmin')) : {};
-console.log(isAdminLoggedIn);
+// console.log(isAdminLoggedIn);
  
   return (
     <>
       <div className="spacer2rem"></div>
+      <h3>Welcome: 
+          
+          </h3>
        <div className="userName">
-          <h4>Welcome: {signedUser.name}
+          <h4> {signedUser.name}
           
           </h4>
           < Loggout />
@@ -34,7 +37,7 @@ console.log(isAdminLoggedIn);
           
           { isAdminLoggedIn ? (
             <Link to={`/userProfile/upload`}>
-              <button className="signInButton">Add Project</button>
+              <button className="signInButton" id="hideMe">Add Project</button>
             </Link>
           ) : <div className="container-column">
             <p className="msgForUser">Welcome dear user, if you like my projects <br></br>write to me. I would be happy to chat</p>

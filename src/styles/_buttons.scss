@@ -57,12 +57,17 @@ button{
      }
    
   }
+
+  #hideMe{
+    z-index: -1;
+  }
+
   .loggout{
     transform-origin: right;
     background-color: transparent;
     border: 2px solid transparent;
     color: pink;
-    font-size: 2rem;
+    font-size: 1.8rem;
     transform: translate(5%, 5%);
      &:hover{
          cursor: grab;
