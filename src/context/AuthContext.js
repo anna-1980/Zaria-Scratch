@@ -9,7 +9,7 @@ const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
 const AuthState = ({children}) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState();
   const [token, setToken] = useState(localStorage.getItem('token'));
   const [loading, setLoading] = useState(false);
@@ -23,6 +23,7 @@ const AuthState = ({children}) => {
         { headers: { Authorization: token}});
         setUser(user);       
         localStorage.setItem('token', token);
+        localStorage.setItem('user', JSON.stringify(user) );
         setToken(token);
         setIsAuthenticated(true);
         setLoading(false); 
@@ -49,7 +50,6 @@ const AuthState = ({children}) => {
         setUser(user);       
         localStorage.setItem('token', token);
         setToken(token);
-        setIsAuthenticated(true);
         setLoading(false); 
         // console.log( { AuthContext: { token} });
       } catch (error) {
