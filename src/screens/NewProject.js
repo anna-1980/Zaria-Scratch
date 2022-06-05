@@ -8,8 +8,8 @@ const NewProject = () => {
    
   const onSubmit = (formData) => newProject(formData);
 //   const onSubmit = (formData) => console.log(formData);
-  const { isAdmin, newProject, upload } = useAuth();
-  console.log(upload);
+  const { isAdmin, newProject  } = useAuth();
+  
  
    
   return (
