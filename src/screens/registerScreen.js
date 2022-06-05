@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useNavigate, Navigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../context/AuthContext';
-
+//rememebr components 
 
 const RegisterScreen = () => {
   const navigate = useNavigate();
