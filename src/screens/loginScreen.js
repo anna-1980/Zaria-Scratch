@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { useForm } from 'react-hook-form';
-import { useLocation, Link, Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import axios from 'axios'; 
 
 const LoginScreen = () => {
-  const {register, handleSubmit, watch, formState: {errors}} = useForm();
+  const {
+    register, 
+    handleSubmit, 
+    watch, formState: {errors}} = useForm();
+
   const onSubmit = async (data) => {
-      
     try {
       const { data:{userName, body, user} } = await axios.get(`${process.env.REACT_APP_API}/api/auth/me`, data)
       console.log(data);

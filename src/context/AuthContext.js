@@ -7,13 +7,12 @@ import axios from 'axios';
 const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
-console.log( AuthContext );
 const AuthState = ({children}) => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const [user, setUser] = useState();
-    const [token, setToken] = useState();
-    const [loading, setLoading] = useState(false);
-   
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [user, setUser] = useState();
+  const [token, setToken] = useState();
+  const [loading, setLoading] = useState(false);
+
     const signup = async  formData  => {
       try {
          
@@ -23,6 +22,7 @@ const AuthState = ({children}) => {
         setToken(token);
         localStorage.setItem('token', token);
         setIsAuthenticated(true);
+        // console.log( { AuthContext: { token} });
       } catch (error) {
       //   toast.error(error.response?.data.error || error.message);
         console.log(error);
