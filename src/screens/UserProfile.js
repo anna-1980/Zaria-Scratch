@@ -7,15 +7,18 @@ const UserProfile = () => {
 let location = useLocation();
 let displayButton = location.pathname !== `/userProfile/upload`
  
-const {isAuthenticated, user } = useAuth();
- 
-if (!isAuthenticated) return <Navigate to="/signin"/> 
+const {isAuthenticated, user, token } = useAuth();
+//  if (!token) return <Navigate to="/signin"/> 
+ const signedUser = localStorage.getItem('user') 
+? JSON.parse(localStorage.getItem('user'))
+: {} ;
+console.log(signedUser);
  
  
   return (
     <>
       <div className="spacer2rem"></div>
-      <h4>Welcome: {user.name}</h4> 
+      <h4>Welcome: {signedUser.name}</h4> 
       {isAuthenticated ? 
       (
         <div>
