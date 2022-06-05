@@ -27,6 +27,7 @@ html{
 h1{
   color: $gold1;
   margin: 1rem 0;
+  font-size: 2rem;
 }
 
 h2{
@@ -48,7 +49,12 @@ h2{
 
 h3{
   color: azure;
-  font-size: 2rem;
+  font-size: 3rem;
+}
+
+h4{
+  color: $standoutOrange;
+  font-size: 3rem;
 }
 
 h5{

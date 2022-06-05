@@ -7,12 +7,14 @@ const UserProfile = () => {
 let location = useLocation();
 let displayButton = location.pathname !== `/userProfile/upload`
  
-const {isAuthenticated} = useAuth();
+const {isAuthenticated, user } = useAuth();
+ 
  
  
   return (
     <> 
-      <h1>This is USER profile</h1>
+      <div className="spacer2rem"></div>
+      <h4>Welcome: {user.name}</h4> 
       {isAuthenticated ? 
       (
         <div>

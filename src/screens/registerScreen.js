@@ -9,13 +9,11 @@ const RegisterScreen = () => {
   const {register, handleSubmit, watch, formState: {errors}} = useForm();
   const userError =  errors.name && <div className='formValidation'>name is required</div> ;
   
-  const { isAuthenticated, signup, token } = useAuth();
+  const { isAuthenticated, signup } = useAuth();
   
   const onSubmit = (formData) => signup(formData);
-    
-//   console.log(`something`);
-//   console.log(token);
-  if( isAuthenticated ) return <Navigate to="/userProfile"/>   
+  
+  if( isAuthenticated ) return <Navigate to="/userProfile"/>   //if user is logged in already it redirects to userProfile
 
   return (
     <>
@@ -44,7 +42,7 @@ const RegisterScreen = () => {
                 Password:
                 </label>
                 <input type='password' className={errors.name ? 'inputError' : 'input'} {...register('password', {required: true})}/>
-                {errors.password && <div className='formValidation'>Password id required</div>}
+                {errors.password && <div className='formValidation'>Password is required</div>}
             </div>
             <div className='textAlignCenter'>
                 <h5>

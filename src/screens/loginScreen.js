@@ -1,23 +1,17 @@
 import { useEffect, useState } from "react";
 import { useForm } from 'react-hook-form';
 import { Link, Navigate } from 'react-router-dom';
-import axios from 'axios'; 
+import { useAuth } from '../context/AuthContext';
 
 const LoginScreen = () => {
   const {
     register, 
     handleSubmit, 
     watch, formState: {errors}} = useForm();
-
-  const onSubmit = async (data) => {
-    try {
-      const { data:{userName, body, user} } = await axios.get(`${process.env.REACT_APP_API}/api/auth/me`, data)
-      console.log(data);
-      // localStorage.setItem('accessToken', JSON.stringify(token));
-    }catch (error){
-      console.log(error);
-    }
-  }
+  const { isAuthenticated, signin } = useAuth();
+  const onSubmit = (formData) => signin(formData);
+  
+  if( isAuthenticated ) return <Navigate to="/userProfile"/>   //if user is logged in already it redirects to userProfile
   
   return (
     <> 
@@ -38,7 +32,7 @@ const LoginScreen = () => {
               Password:
             </label>
              <input type='password' className={errors.password ? 'inputError' : 'input'} {...register('password', {required: true})}/>
-                {errors.password && <div className='formValidation'>Password id required</div>}
+                {errors.password && <div className='formValidation'>Password is required</div>}
           </div>
           <div className='textAlignCenter'>
             <h5>
