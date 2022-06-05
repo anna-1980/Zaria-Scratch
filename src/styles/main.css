@@ -145,6 +145,44 @@ button {
           box-shadow: 2px 2px 4px black;
 }
 
+.tiptext {
+  position: absolute;
+  left: -40px;
+  bottom: 40px;
+  min-width: 130px;
+  padding: 0.5rem 0.5rem;
+  visibility: hidden;
+  background-color: #f370d9;
+  color: #fff;
+  text-align: center;
+  font-size: 1.7rem;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.backToUserProfile {
+  position: absolute;
+  left: 10px;
+  bottom: 6px;
+  color: #7777cb;
+  background-color: #9693d8;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.1rem 1rem;
+}
+
+.backToUserProfile:hover {
+  background-color: #f370d9;
+}
+
+.backToUserProfile:hover .tiptext {
+  visibility: visible;
+  opacity: 0.8;
+}
+
 .bouncer div {
   width: 30px;
   height: 30px;
@@ -391,6 +429,7 @@ div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;

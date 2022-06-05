@@ -131,6 +131,7 @@ div{
   }
 .container-column {
     @include flex(column, center, center);
+    position: relative;
     flex-wrap: wrap;
     margin: 0;
   }

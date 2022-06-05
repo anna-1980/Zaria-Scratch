@@ -2,15 +2,17 @@ import { useEffect, useState } from "react";
 import { useForm } from 'react-hook-form';
 import { Link, Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Loader from '../components/Loader.js'
 
 const LoginScreen = () => {
   const {
     register, 
     handleSubmit, 
     watch, formState: {errors}} = useForm();
-  const { isAuthenticated, signin } = useAuth();
+  const { isAuthenticated, signin, loading } = useAuth();
   const onSubmit = (formData) => signin(formData);
-  
+  console.log(isAuthenticated);
+  if(loading) return <Loader />
   if( isAuthenticated ) return <Navigate to="/userProfile"/>   //if user is logged in already it redirects to userProfile
   
   return (

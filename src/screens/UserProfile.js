@@ -9,6 +9,7 @@ let displayButton = location.pathname !== `/userProfile/upload`
  
 const {isAuthenticated, user } = useAuth();
  
+if (!isAuthenticated) return <Navigate to="/signin"/> 
  
  
   return (

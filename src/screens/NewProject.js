@@ -29,6 +29,10 @@ const NewProject = () => {
             <button type='submit' className='submitButton' >
             submit
             </button>
+            <button className='backToUserProfile' >
+            &#x003C;  
+                 <button className="tiptext"  >back to Profile</button>
+            </button>
             </form>
 
 

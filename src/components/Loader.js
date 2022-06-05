@@ -2,7 +2,8 @@ import React from 'react'
 
 const Loader = () => {
   return (
-    <div className="bouncer">
+    
+    <div className="bouncer spacer2rem">
     <div></div>
     <div></div>
     <div></div>
