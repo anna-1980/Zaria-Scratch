@@ -145,6 +145,86 @@ button {
           box-shadow: 2px 2px 4px black;
 }
 
+.bouncer div {
+  width: 30px;
+  height: 30px;
+  background-color: #279b42;
+  border-radius: 50%;
+  -webkit-animation: bouncer 0.8s cubic-bezier(0.5, 0.5, 0.3, 0.9) infinite alternate;
+          animation: bouncer 0.8s cubic-bezier(0.5, 0.5, 0.3, 0.9) infinite alternate;
+  bottom: 1rem;
+  -webkit-box-shadow: inset -2px -3px 4px rgba(18, 18, 18, 0.3);
+          box-shadow: inset -2px -3px 4px rgba(18, 18, 18, 0.3);
+  -ms-grid-column-align: center;
+      justify-self: center;
+  z-index: 4;
+}
+
+.bouncer div::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 50%;
+  height: 35%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background: linear-gradient(190deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+}
+
+@-webkit-keyframes bouncer {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
+@keyframes bouncer {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
+.bouncer div:nth-child(1) {
+  background-color: #46af19;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.bouncer div:nth-child(2) {
+  background-color: #fee318;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.bouncer div:nth-child(3) {
+  background-color: #fc0606;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.bouncer div:nth-child(4) {
+  background-color: #fc8d06;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.bouncer div:nth-child(5) {
+  background-color: #069efc;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
 * {
   margin: 0;
   padding: 0;

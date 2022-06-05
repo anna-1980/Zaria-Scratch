@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation, Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { useAuth } from '../context/AuthContext';
+ 
 
 const UserProfile = () => {
 
@@ -12,7 +12,7 @@ const {isAuthenticated, user } = useAuth();
  
  
   return (
-    <> 
+    <>
       <div className="spacer2rem"></div>
       <h4>Welcome: {user.name}</h4> 
       {isAuthenticated ? 
@@ -25,7 +25,9 @@ const {isAuthenticated, user } = useAuth();
             </Link>
           ) : <div></div>
           }
-        
+          
+           
+
             <Link to={`/home`} >
                 <button id='goBack'>Go Back</button>
             </Link>
