@@ -1,31 +1,36 @@
 import { Outlet, Link, useLocation, Navigate } from "react-router-dom";
 import { useAuth } from '../context/AuthContext';
- 
+import Loggout from "../components/Loggout";
 
 const UserProfile = () => {
 
 let location = useLocation();
 let displayButton = location.pathname !== `/userProfile/upload`
  
-const {isAuthenticated, user, token } = useAuth();
+const {isAuthenticated, user, token, isAdmin } = useAuth();
 //  if (!token) return <Navigate to="/signin"/> 
  const signedUser = localStorage.getItem('user') 
 ? JSON.parse(localStorage.getItem('user'))
 : {} ;
-console.log(signedUser);
- 
+// console.log(user);
  
   return (
     <>
       <div className="spacer2rem"></div>
-      <h4>Welcome: {signedUser.name}</h4> 
+       <div className="userName">
+          <h4>Welcome: {signedUser.name}
+          
+          </h4>
+          < Loggout />
+      </div> 
+      
       {isAuthenticated ? 
       (
         <div>
           
           { displayButton ? (
             <Link to={`/userProfile/upload`}>
-              <button className="signInButton">Add new</button>
+              <button className="signInButton">Add Project</button>
             </Link>
           ) : <div></div>
           }
@@ -40,6 +45,7 @@ console.log(signedUser);
         </div>
       )
       : <Navigate to="/signin"/>}
+      
     </>
   )
 }

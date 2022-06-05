@@ -14,7 +14,7 @@ import RegisterScreen from './screens/RegisterScreen';
 import NotFound from './screens/NotFound'
 import UserProfile from './screens/UserProfile';
 import NewProject from './screens/NewProject';
-
+import Loggout from './components/Loggout';
 
 function App() {
    
@@ -42,7 +42,7 @@ function App() {
     }
   };
   getProjects();
-  }, []);
+  }, [projects]);
 
 
   return (
@@ -59,8 +59,6 @@ function App() {
           <h2>
             Scratch projects
           </h2>
-         
-          
       </div>
       <AuthState>
         <ToastContainer/>
@@ -85,7 +83,7 @@ function App() {
         {/* < Iframes /> */}
 
         <BackToTopButton />   
-     
+        
     </div>
     
   );

@@ -12,8 +12,8 @@ const AuthState = ({children}) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState();
   const [token, setToken] = useState(localStorage.getItem('token'));
+  const [isAdmin, setIsAdmin] = useState(localStorage.getItem('isAdmin'));
   const [loading, setLoading] = useState(false);
-
   //to persist loggedIn user on refresh of the page, so when components mount again you have to put retrieving user data and token in useEffect, so it happens again on component mount
   useEffect( () => {
     const alreadySignedIn = async () => {
@@ -24,8 +24,10 @@ const AuthState = ({children}) => {
         setUser(user);       
         localStorage.setItem('token', token);
         localStorage.setItem('user', JSON.stringify(user) );
+        localStorage.setItem('isAdmin', JSON.stringify(isAdmin) );
         setToken(token);
         setIsAuthenticated(true);
+        setIsAdmin(isAdmin);
         setLoading(false); 
         // console.log( { AuthContext: { token} });
       } catch (error) {
@@ -83,11 +85,38 @@ const AuthState = ({children}) => {
       }
      
     
+    
     };
+
+    const signout= () => {
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      setUser();
+      setIsAuthenticated(false);
+    };
+
+    const newProject = async  formData  => {
+      try {
+        setLoading(true); 
+        const { data }= await axios.post(`${process.env.REACT_APP_API}/api/projects`, formData,
+        { headers: { Authorization: token}});
+        console.log(data);
+        setLoading(false); 
+        // console.log( { AuthContext: { token} });
+      } catch (error) {
+      //   toast.error(error.response?.data.error || error.message);
+        console.log(error);
+        setLoading(false);
+       
+      }
+     
+     };
+
+    
 
     // provider allows you to wrap anycomponents and every child component has access to the data
     //all routes in App.js are now wrapped in AuthState component which provides the CONTEXT
-    return <AuthContext.Provider value={{isAuthenticated, signup, signin, user, loading, token}}>{children}</AuthContext.Provider>
+    return <AuthContext.Provider value={{isAuthenticated, signup, signin, signout , user, loading, token, isAdmin, newProject}}>{children}</AuthContext.Provider>
 
 
 

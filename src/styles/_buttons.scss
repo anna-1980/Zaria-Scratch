@@ -44,6 +44,20 @@ button{
      }
    
   }
+  .loggout{
+    transform-origin: right;
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: pink;
+    font-size: 2rem;
+    transform: translate(5%, 5%);
+     &:hover{
+         cursor: grab;
+         border: 2px solid $color3;
+         box-shadow: 2px 2px 4px black;
+     }
+   
+  }
 
   .submitButton{
       margin:1rem auto ;
