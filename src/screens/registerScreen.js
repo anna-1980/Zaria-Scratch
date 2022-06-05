@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, NavLink, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 
 
@@ -14,8 +13,10 @@ const RegisterScreen = () => {
   
   const onSubmit = (formData) => signup(formData);
     
-  console.log(`something`);
-  console.log(token);
+//   console.log(`something`);
+//   console.log(token);
+  if( isAuthenticated ) return <Navigate to="/userProfile"/>   
+
   return (
     <>
     <h1 className='spacer4rem'>Registration</h1>
@@ -54,7 +55,8 @@ const RegisterScreen = () => {
             submit
             </button>
             </form>
-     {token && <Navigate to="/userProfile"/> }
+     {/* after successful registration take user to userProfile screen       
+     {token && <Navigate to="/userProfile"/> }    */}
     <Link to={`/home`} >
             <button id='goBack'>Go Back</button>
             </Link>

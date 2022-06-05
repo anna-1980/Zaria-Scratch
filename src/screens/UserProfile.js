@@ -6,9 +6,9 @@ const UserProfile = () => {
 
 let location = useLocation();
 let displayButton = location.pathname !== `/userProfile/upload`
-console.log( useAuth );
-// const {isAuthenticated} = useAuth();
-const isAuthenticated = true;
+ 
+const {isAuthenticated} = useAuth();
+ 
  
   return (
     <> 
