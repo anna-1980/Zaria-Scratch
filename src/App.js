@@ -1,23 +1,23 @@
 import './styles/main.css';
 import { Routes, Route } from 'react-router-dom';
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useEffect, useState } from "react";
 import axios from 'axios';
+import AuthState from './context/AuthContext';
 import Iframes from './components/Iframes';
 import BackToTopButton from './components/BackToTopButton';
 import SingleProject from './components/SingleProject';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useEffect, useState } from "react";
+import LoginScreen from './screens/LoginScreen';
+import RegisterScreen from './screens/RegisterScreen';
+import NotFound from './screens/NotFound'
+import UserProfile from './screens/UserProfile';
+import NewProject from './screens/NewProject';
+import Loggout from './components/Loggout';
 
 function App() {
-
-  // const [projects, setProjects] = useState([
-  //   '699241050',
-  //   '566020141',
-  //   '585075144',
-  //   '683124108',
-  //   '697898958',
-  //   '695288431', 
-  //   '646527705'])  
+   
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -36,14 +36,13 @@ function App() {
       const { data } = await axios.get("https://sleepy-sea-73067.herokuapp.com/api/projects");
       setLoading(true);
       setProjects(data);
-      console.log(`get all games: ${data}`);
       setLoading(false);
     } catch (error) {
-      return alert ("Sorry something went wrong getting the games")
+      return alert ("Sorry something went wrong getting the projects")
     }
   };
   getProjects();
-  }, []);
+  }, [projects]);
 
 
   return (
@@ -60,24 +59,31 @@ function App() {
           <h2>
             Scratch projects
           </h2>
-         
-          
       </div>
-      <Routes>           
-            <Route index element= {< Iframes projects={projects}/>} />
-            <Route path='/home' element= {< Iframes  projects={projects}  />} />       
-            <Route path='/singleProject/*' element= {<SingleProject  
-            projects={projects} 
-            setProjects={setProjects} 
-            setLoading = {setLoading} 
-            loading= {loading}/>} />       
-      </Routes>
-       
+      <AuthState>
+        <ToastContainer/>
+          <Routes>           
+            <Route path='/'/>
+              <Route index element= {< Iframes projects={projects}/>} />
+              <Route path='/home' element= {< Iframes  projects={projects}  />} />       
+              <Route path='/singleProject/*' element= {<SingleProject  
+              projects={projects} 
+              setProjects={setProjects} 
+              setLoading = {setLoading} 
+              loading= {loading}/>} /> 
+              <Route path='/signin' element={<LoginScreen />}/>      
+              <Route path='/register' element={<RegisterScreen />}/>      
+              <Route path='/userProfile' element={<UserProfile />}> // protected route
+                  <Route path='/userProfile/upload' element={<NewProject />}/>
+              </Route>
+              <Route path='*' element={<NotFound />}/>      
+          </Routes>
+      </AuthState> 
       </header>
         {/* < Iframes /> */}
 
         <BackToTopButton />   
-       
+        
     </div>
     
   );

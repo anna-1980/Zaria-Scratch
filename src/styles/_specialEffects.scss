@@ -1,0 +1,57 @@
+.bouncer div {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(39, 155, 66);
+    border-radius: 50%;
+    animation: bouncer 0.8s cubic-bezier(0.50, 0.5, 0.3, 0.9) infinite alternate;
+    bottom: 1rem;
+    box-shadow: inset -2px -3px 4px rgba(18, 18, 18, 0.3);
+    justify-self: center;
+    z-index: 4;
+  }
+  
+  .bouncer div::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 50%;
+    height: 35%;
+    transform: rotate(-45deg);
+    background: linear-gradient(
+      190deg,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0)
+    );
+    border-radius: 50%;
+  }
+  
+  @keyframes bouncer {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-30px);
+    }
+  }
+  
+  .bouncer div:nth-child(1) {
+    background-color: rgb(70, 175, 25);
+    animation-delay: 0.1s;
+  }
+  .bouncer div:nth-child(2) {
+    background-color: rgb(254, 227, 24);
+    animation-delay: 0.2s;
+  }
+  .bouncer div:nth-child(3) {
+    background-color: rgb(252, 6, 6);
+    animation-delay: 0.3s;
+  }
+  .bouncer div:nth-child(4) {
+    background-color: rgb(252, 141, 6);
+    animation-delay: 0.4s;
+  }
+  .bouncer div:nth-child(5) {
+    background-color: rgb(6, 158, 252);
+    animation-delay: 0.5s;
+  }

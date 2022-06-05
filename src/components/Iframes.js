@@ -1,15 +1,11 @@
 import React from 'react'
-import BackToTopButton from './BackToTopButton';
-import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useParams } from "react-router";
-import { useEffect, useState } from "react";
+import { useAuth } from '../context/AuthContext';
+import Loggout from './Loggout';
 
 const Iframes = ({projects}) => {
-  // {
-  //   projects.map(({author, _id, url, description, title}) => {
-  //     console.log(url)
-  //   })
-  // }
+  const { isAuthenticated, user } = useAuth(); 
   let projectNumber = [];
   let url = `${
     projects.map(({author, _id, url, description, title}) => {
@@ -60,11 +56,18 @@ const Iframes = ({projects}) => {
               );
             })}
         </div>
-         
+        {
+          isAuthenticated ? 
+          <Link to={`/userProfile`}>
+          <button  className='signInButton'>User Profile</button>
+        </Link>
+          : 
+          <Link to={`/signin`}>
+          <button  className='signInButton'>Sign In</button>
+        </Link>
+        }
+       
 
-
-     
- 
     </div>
     
 
