@@ -76,6 +76,12 @@ input:focus {
   border: 2px solid red;
 }
 
+#basicForm {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
 button {
   border: none;
   cursor: -webkit-grabbing;
@@ -101,7 +107,7 @@ button {
 
 #goBack {
   position: absolute;
-  top: 54vh;
+  top: 56vh;
   right: 50vw;
   -webkit-transform-origin: right;
           transform-origin: right;
@@ -113,6 +119,18 @@ button {
   border: 1px solid #fbe5a9;
   -webkit-box-shadow: 2px 2px 4px black;
           box-shadow: 2px 2px 4px black;
+}
+
+#goBackUserProfile {
+  border: 1px solid transparent;
+}
+
+#goBackUserProfile:hover {
+  border: 1px solid #fbe5a9;
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .signInButton {
@@ -200,6 +218,19 @@ button {
 .backToUserProfile:hover .tiptext {
   visibility: visible;
   opacity: 0.8;
+}
+
+.formButton {
+  margin: 1rem auto;
+  background-color: #eba31f;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.formButton:hover {
+  background-color: #ea5436;
+  -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 .bouncer div {
@@ -325,7 +356,7 @@ h3 {
 h4 {
   position: relative;
   color: #eba31f;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -343,6 +374,8 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto;
+  max-width: 95%;
   border: 2px solid #7777cb;
   border-radius: 10px;
   padding-left: 2rem;
@@ -354,6 +387,14 @@ h4 {
 h5 {
   color: azure;
   font-weight: 500;
+}
+
+.msgForUser {
+  padding: 0;
+  margin: 2rem 0;
+  max-width: 93%;
+  color: #9693d8;
+  font-size: 1.9rem;
 }
 
 .textAlignCenter {

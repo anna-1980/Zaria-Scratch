@@ -1,6 +1,7 @@
 import { Outlet, Link, useLocation, Navigate } from "react-router-dom";
 import { useAuth } from '../context/AuthContext';
 import Loggout from "../components/Loggout";
+import BasicForm from "../components/BasicForm.js";
 
 const UserProfile = () => {
 
@@ -12,7 +13,10 @@ const {isAuthenticated, user, token, isAdmin } = useAuth();
  const signedUser = localStorage.getItem('user') 
 ? JSON.parse(localStorage.getItem('user'))
 : {} ;
-// console.log(isAdmin);
+const isAdminLoggedIn = isAdmin ;
+// const isAdminLoggedIn = localStorage.getItem('isAdmin') 
+// ? JSON.parse(localStorage.getItem('isAdmin')) : {};
+console.log(isAdminLoggedIn);
  
   return (
     <>
@@ -28,21 +32,24 @@ const {isAuthenticated, user, token, isAdmin } = useAuth();
       (
         <div>
           
-          { displayButton ? (
+          { isAdminLoggedIn ? (
             <Link to={`/userProfile/upload`}>
               <button className="signInButton">Add Project</button>
             </Link>
-          ) : <div></div>
-          }
-          
-           
-
+          ) : <div className="container-column">
+            <p className="msgForUser">Welcome dear user, if you like my projects <br></br>write to me. I would be happy to chat</p>
+            <BasicForm />
             <Link to={`/home`} >
-                <button id='goBack'>Go Back</button>
+                <button id='goBackUserProfile'>Go Back</button>
             </Link>
+          </div>
+          }
+    
+            
           
         <Outlet/>
         </div>
+        
       )
       : <Navigate to="/signin"/>}
       

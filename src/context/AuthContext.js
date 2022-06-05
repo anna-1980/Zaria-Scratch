@@ -12,9 +12,11 @@ const AuthState = ({children}) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState();
   const [token, setToken] = useState(localStorage.getItem('token'));
-  const [isAdmin, setIsAdmin] = useState(localStorage.getItem('isAdmin'));
+  const [isAdmin, setIsAdmin] = useState(false);
   const [loading, setLoading] = useState(false);
   //to persist loggedIn user on refresh of the page, so when components mount again you have to put retrieving user data and token in useEffect, so it happens again on component mount
+ 
+ 
   useEffect( () => {
     const alreadySignedIn = async () => {
       try {
@@ -24,11 +26,17 @@ const AuthState = ({children}) => {
         setUser(user);       
         localStorage.setItem('token', token);
         localStorage.setItem('user', JSON.stringify(user) );
-        localStorage.setItem('isAdmin', JSON.stringify(isAdmin) );
+        if(user.isAdmin ) {
+          console.log('there is admin');
+          setIsAdmin(true);
+        }else{
+          console.log('NOT and admin')
+        };
         setToken(token);
         setIsAuthenticated(true);
-        setIsAdmin(isAdmin);
+        
         setLoading(false); 
+        console.log(user.isAdmin);
         // console.log( { AuthContext: { token} });
       } catch (error) {
       //   toast.error(error.response?.data.error || error.message);
@@ -91,6 +99,8 @@ const AuthState = ({children}) => {
     const signout= () => {
       localStorage.removeItem('token');
       localStorage.removeItem('user');
+      localStorage.setItem('isAdmin', false)
+      setIsAdmin(false);
       setUser();
       setIsAuthenticated(false);
     };

@@ -21,7 +21,7 @@ button{
 
   #goBack{
     position: absolute;
-    top:54vh;
+    top:56vh;
     right:50vw;
     transform-origin: right;
     transform: translate(50%, 50%);
@@ -29,7 +29,20 @@ button{
         border: 1px solid $gold4;
         box-shadow: 2px 2px 4px black;
     }
-  
+  }
+
+  #goBackUserProfile{
+    // position: absolute;
+    // top:56vh;
+    // right:50vw;
+    // transform-origin: right;
+    // transform: translate(50%, 50%);
+    border: 1px solid transparent;
+    &:hover{
+        border: 1px solid $gold4;
+        box-shadow: 2px 2px 4px black;
+        transform: scale(1.1);
+    }
   }
 
   .signInButton{
@@ -105,6 +118,16 @@ button{
       background-color: rgb(243, 112, 217);
     }
    
+  }
+
+  .formButton{
+    margin:1rem auto ;
+    background-color: $standoutOrange;
+    box-shadow: none;
+      &:hover{
+        background-color: $standoutRed;
+        box-shadow: $boxShadow;
+      }
   }
 
   
