@@ -33,10 +33,9 @@ function App() {
       const { data } = await axios.get("https://sleepy-sea-73067.herokuapp.com/api/projects");
       setLoading(true);
       setProjects(data);
-      console.log(`get all games: ${data}`);
       setLoading(false);
     } catch (error) {
-      return alert ("Sorry something went wrong getting the games")
+      return alert ("Sorry something went wrong getting the projects")
     }
   };
   getProjects();
