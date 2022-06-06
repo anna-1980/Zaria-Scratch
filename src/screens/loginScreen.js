@@ -16,9 +16,7 @@ const LoginScreen = () => {
   return (
     <> 
     <div className='spacer4rem'></div>
-     <Link to={`/home`} >
-            <button id='goBack'>Go Back</button>
-            </Link>
+     
         <form  autoComplete='off' onSubmit={handleSubmit(onSubmit)}>
           <div className='formFields'>
             <label htmlFor='email' >
