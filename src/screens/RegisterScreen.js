@@ -20,7 +20,7 @@ const RegisterScreen = () => {
     <h1 className='spacer4rem'>Registration</h1>
      
         <form  
-        className='registrationForm' 
+        className='registrationForm, basicForm'
         autoComplete='off'
         onSubmit={handleSubmit(onSubmit)}>
             <div className='formFields'>
