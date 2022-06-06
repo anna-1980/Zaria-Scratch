@@ -15,14 +15,14 @@ console.log(location.pathname)
 console.log(singleProject)
   return (
     <div> 
-        <nav>
-        <Link to={`/home`} >
-            <button id='goBack'>Go Back</button>
-            </Link>
-        </nav>
 
      <div className="container " id="singleProjectContainer">
                 <iframe  src={`https://scratch.mit.edu/projects/${singleProject}/embed`}></iframe>
+     
+        <Link to={`/home`} >
+            <button id='goBack'>Go Back</button>
+            </Link>
+       
      
      
         
