@@ -2,7 +2,7 @@ import React from 'react'
  
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useParams } from "react-router";
-import { useEffect, useState } from "react";
+ 
 
 
 const SingleProject = ({projects}) => {
@@ -11,8 +11,9 @@ const SingleProject = ({projects}) => {
     let navigate = useNavigate();
 
 const singleProject = location.pathname ? location.pathname.split('/')[2] : 1;
-console.log(location.pathname)
-console.log(singleProject)
+console.log(location)
+console.log(params)
+console.log(projects)
   return (
     <div> 
 
@@ -20,7 +21,7 @@ console.log(singleProject)
                 <iframe  src={`https://scratch.mit.edu/projects/${singleProject}/embed`}></iframe>
      
         <Link to={`/home`} >
-            <button id='goBack'>Go Back</button>
+            <button >Go Back</button>
             </Link>
        
      

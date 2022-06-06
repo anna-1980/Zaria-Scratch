@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useParams } from "react-router";
 import { useAuth } from '../context/AuthContext';
-import Loggout from './Loggout';
+
 
 const Iframes = ({projects}) => {
   const { isAuthenticated, user } = useAuth(); 
@@ -18,7 +18,7 @@ const Iframes = ({projects}) => {
   let params = useParams();
   let location = useLocation();
   let navigate = useNavigate();
-  // console.log(projectNumber);
+  console.log(location);
   // console.log(url);
   let _id = `646527705`
   // let url = `https://scratch.mit.edu/projects/695288431/embed`
@@ -33,7 +33,7 @@ const Iframes = ({projects}) => {
             {projects.map(({id, url, description, title}) => {
               return (
                  
-                <Link to={ `/singleProject/${id}` } key={_id}>
+                <Link to={ `/singleProject/${url.split('/')[4]}` } key={_id}>
                 <div className='container-column'>
                   <h1 className='projectTitle'>Title: {title}</h1>
                 <iframe  
