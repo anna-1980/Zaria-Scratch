@@ -9,8 +9,8 @@ import AuthState from './context/AuthContext';
 import Iframes from './components/Iframes';
 import BackToTopButton from './components/BackToTopButton';
 import SingleProject from './components/SingleProject';
-import LoginScreen from './screens/LoginScreen'; //caps
-import RegisterScreen from './screens/RegisterScreen';
+// import LoginScreen from './screens/LoginScreen';  
+// import RegisterScreen from './screens/RegisterScreen';
 import NotFound from './screens/NotFound'
 import UserProfile from './screens/UserProfile';
 import NewProject from './screens/NewProject';

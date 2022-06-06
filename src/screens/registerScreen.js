@@ -64,4 +64,4 @@ const RegisterScreen = () => {
 
 export default RegisterScreen
 
-//remember capital letter
+//remember capital 
