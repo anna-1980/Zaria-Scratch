@@ -11,14 +11,12 @@ const SingleProject = ({projects}) => {
     let navigate = useNavigate();
 
 const singleProject = location.pathname ? location.pathname.split('/')[2] : 1;
-console.log(location)
-console.log(params)
-console.log(projects)
+ 
   return (
     <div> 
 
-     <div className="container " id="singleProjectContainer">
-                <iframe  src={`https://scratch.mit.edu/projects/${singleProject}/embed`}></iframe>
+     <div   id="singleProjectContainer">
+                <iframe className='singleProjectFrame' src={`https://scratch.mit.edu/projects/${singleProject}/embed`}></iframe>
      
         <Link to={`/home`} >
             <button >Go Back</button>

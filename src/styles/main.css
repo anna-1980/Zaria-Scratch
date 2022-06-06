@@ -105,7 +105,7 @@ button {
 .scrollButton {
   position: fixed;
   border: 1px solid #ed5353;
-  bottom: 27vh;
+  bottom: 23vh;
   right: 2rem;
   -webkit-box-shadow: 2px 2px 8px black;
           box-shadow: 2px 2px 8px black;
@@ -313,6 +313,47 @@ button {
           animation-delay: 0.5s;
 }
 
+@media screen and (max-width: 1290px) {
+  .singleProjectFrame {
+    width: 100vw;
+    height: 55vw;
+  }
+  #singleProjectContainer {
+    width: 60vw  !important;
+    height: 50vw;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .singleProjectFrame {
+    height: 60vw;
+  }
+  #singleProjectContainer {
+    width: 80vw   !important;
+    height: 60vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .singleProjectFrame {
+    height: 45vh !important;
+  }
+  #singleProjectContainer {
+    width: 95vw   !important;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .singleProjectFrame {
+    height: 35vh !important;
+  }
+  #singleProjectContainer {
+    width: 95vw   !important;
+    height: 100%;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -487,6 +528,28 @@ div {
   position: relative;
 }
 
+#singleProjectContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70vw;
+}
+
+.singleProjectFrame {
+  width: 100%;
+  height: 50vw;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,7 +621,7 @@ iframe {
   color: #3d3d9f;
   text-align: left;
   background-color: rgba(250, 251, 253, 0.8);
-  font-size: 2.2rem;
+  font-size: 1.9rem;
 }
 
 .projectDescription {
@@ -569,7 +632,7 @@ iframe {
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
   background-color: rgba(250, 251, 253, 0.8);
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #3d3d9f;
   padding: 0.5rem;
 }

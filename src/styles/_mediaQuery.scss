@@ -1,0 +1,53 @@
+@media screen and (max-width: 1290px) {
+    .singleProjectFrame{
+      
+        width: 100vw;
+        height: 55vw;
+      }
+
+      #singleProjectContainer{
+
+        width: 60vw  !important;
+     
+        height: 50vw;
+      }
+}
+
+@media screen and (max-width: 1060px) {
+    .singleProjectFrame{
+     
+        height: 60vw;
+      }
+
+      #singleProjectContainer{
+
+        width: 80vw   !important ;
+        height: 60vw;
+      }
+}
+
+@media screen and (max-width: 500px) {
+    .singleProjectFrame{
+      
+        height: 45vh !important; 
+      }
+
+      #singleProjectContainer{
+
+        width: 95vw   !important ;
+        height: 100%;
+      }
+}
+
+@media screen and (max-width: 420px) {
+    .singleProjectFrame{
+      
+        height: 35vh !important; 
+      }
+
+      #singleProjectContainer{
+
+        width: 95vw   !important ;
+        height: 100%;
+      }
+}
