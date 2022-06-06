@@ -56,9 +56,9 @@ const isAdminLoggedIn = isAdmin ;
       )
       : <Navigate to="/signin"/>}
       
-    {/* <Link to={`/home`} >
+    <Link to={`/home`} >
         <button id='goBack'>Go Back</button>
-    </Link> */}
+    </Link>
     </>
   )
 }

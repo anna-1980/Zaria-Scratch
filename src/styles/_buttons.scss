@@ -1,135 +1,143 @@
 button{
    
-    border:none;
-    cursor: grabbing;
-    z-index: 1;
-    background-color: $gold1;
-    border-radius: 10px;
-    padding: 1rem 2rem;
-    font-size: 2rem;
-    z-index: 1;
-    transition: 0.3s;
+  border:none;
+  cursor: grabbing;
+  z-index: 1;
+  background-color: $gold1;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.scrollButton{
+  position: fixed;
+  border:1px solid rgb(237, 83, 83);
+  bottom:35vh;
+  right: 2rem;  
+  box-shadow: 2px 2px 8px(black);
+}
+
+#goBack{
+  // position: absolute;
+  // top:56vh;
+  // right:50vw;
+  display: inline-block;
+  margin: auto 0;
+  transform-origin: center;
+  transform: translate(100%, 50%);
+  &:hover{
+      border: 1px solid $gold4;
+      box-shadow: 2px 2px 4px black;
   }
+}
 
-  .scrollButton{
-    position: fixed;
-    border:1px solid rgb(237, 83, 83);
-    bottom:35vh;
-    right: 2rem;  
-    box-shadow: 2px 2px 8px(black);
+#goBackUserProfile{
+  // position: absolute;
+  // top:56vh;
+  // right:50vw;
+  // transform-origin: right;
+  // transform: translate(50%, 50%);
+  border: 1px solid transparent;
+  &:hover{
+      border: 1px solid $gold4;
+      box-shadow: 2px 2px 4px black;
+      transform: scale(1.1);
   }
+}
 
-  #goBack{
+.signInButton{
+  // position: absolute;
+  // right:50vw;
+  display: inline-block;
+  margin: auto 0;
+  background-color: $color2;
+  transform-origin: right;
+  transform: translate(5%, 50%);
+   &:hover{
+       border: 2px solid $color3;
+       box-shadow: 2px 2px 4px black;
+   }
+ 
+}
 
-    display: inline-block;
-    margin: auto 0;
-    transform-origin: right;
-    transform: translate(5%, 50%);
-    &:hover{
-        border: 1px solid $gold4;
-        box-shadow: 2px 2px 4px black;
-    }
-  }
+#hideMe{
+   position: absolute;
+   right:50vw;
+   transform: translate(50%, 50%);
+  z-index: -1;
+}
 
-  #goBackUserProfile{
+.loggout{
+  transform-origin: right;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: pink;
+  font-size: 1.8rem;
+  transform: translate(5%, 5%);
+   &:hover{
+       cursor: grab;
+       border: 2px solid $color3;
+       box-shadow: 2px 2px 4px black;
+   }
+ 
+}
 
-    border: 1px solid transparent;
-    &:hover{
-        border: 1px solid $gold4;
-        box-shadow: 2px 2px 4px black;
-        transform: scale(1.1);
-    }
-  }
-
-  .signInButton{
-
-    display: inline-block;
-    margin: auto 0;
-    background-color: $color2;
-    transform-origin: right;
-    transform: translate(5%, 50%);
-     &:hover{
-         border: 2px solid $color3;
-         box-shadow: 2px 2px 4px black;
-     }
-   
-  }
-
-  #hideMe{
-    z-index: -1;
-  }
-
-  .loggout{
-    transform-origin: right;
-    background-color: transparent;
-    border: 2px solid transparent;
-    color: pink;
-    font-size: 1.8rem;
-    transform: translate(5%, 5%);
-     &:hover{
-         cursor: grab;
-         border: 2px solid $color3;
-         box-shadow: 2px 2px 4px black;
-     }
-   
-  }
-
-  .submitButton{
-      margin:1rem auto ;
-      padding: 0.5rem 1rem;
-      background-color: $standoutOrange;
-      &:hover{
-        transform: scale(1.1);
-        background-color: $standoutRed;
-        box-shadow: 2px 2px 4px black;
-    }
-  }
-
-  .tiptext {
-    position: absolute;
-    left: -40px;
-    bottom: 40px;
-    min-width: 130px;
-    padding: 0.5rem 0.5rem;
-    visibility: hidden;
-    background-color: rgb(243, 112, 217);
-    color: #fff;
-    text-align: center;
-    font-size: 1.7rem;
-    z-index: 1;
-    pointer-events: none;
-    transition: 0s;
-     
-  }
-
-  .backToUserProfile{
-    position: absolute;
-    left: 10px;
-    bottom: 6px;
-    color: $color2;
-    background-color: $color3;
-    font-size: 3rem;
-    font-weight: 500;
-    text-align: center;
-    padding: 0.1rem 1rem;
-    &:hover{
-      .tiptext{
-        visibility: visible;
-        opacity: 0.8;
-      }
-      background-color: rgb(243, 112, 217);
-    }
-   
-  }
-
-  .formButton{
+.submitButton{
     margin:1rem auto ;
+    padding: 0.5rem 1rem;
     background-color: $standoutOrange;
-    box-shadow: none;
-      &:hover{
-        background-color: $standoutRed;
-        box-shadow: $boxShadow;
-      }
+    &:hover{
+      transform: scale(1.1);
+      background-color: $standoutRed;
+      box-shadow: 2px 2px 4px black;
   }
+}
 
-  
+.tiptext {
+  position: absolute;
+  left: -40px;
+  bottom: 40px;
+  min-width: 130px;
+  padding: 0.5rem 0.5rem;
+  visibility: hidden;
+  background-color: rgb(243, 112, 217);
+  color: #fff;
+  text-align: center;
+  font-size: 1.7rem;
+  z-index: 1;
+  pointer-events: none;
+  transition: 0s;
+   
+}
+
+.backToUserProfile{
+  position: absolute;
+  left: 10px;
+  bottom: 6px;
+  color: $color2;
+  background-color: $color3;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.1rem 1rem;
+  &:hover{
+    .tiptext{
+      visibility: visible;
+      opacity: 0.8;
+    }
+    background-color: rgb(243, 112, 217);
+  }
+ 
+}
+
+.formButton{
+  margin:1rem auto ;
+  background-color: $standoutOrange;
+  box-shadow: none;
+    &:hover{
+      background-color: $standoutRed;
+      box-shadow: $boxShadow;
+    }
+}
