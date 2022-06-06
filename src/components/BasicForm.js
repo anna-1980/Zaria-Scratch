@@ -18,7 +18,7 @@ const BasicForm= () => {
          
             
             <label htmlFor="message" className="msgText"   >Message</label> 
-            <textarea  name="message" id="message" cols="50" rows="10" required></textarea>
+            <textarea  name="message" id="message" cols="43" rows="10" required></textarea>
             
           {/* <div data-netlify-recaptcha="true"></div> */}
            

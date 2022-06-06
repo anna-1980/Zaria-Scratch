@@ -16,7 +16,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 10px;
   background-color: #7777cb;
   color: white;
@@ -27,7 +27,8 @@
 
 textarea {
   font-family: 'Roboto Slab', serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  padding: 0.5rem;
 }
 
 label {
@@ -148,7 +149,7 @@ button {
 }
 
 .signInButton:hover {
-  border: 2px solid #9693d8;
+  border: 2px solid #a8a5e5;
   -webkit-box-shadow: 2px 2px 4px black;
           box-shadow: 2px 2px 4px black;
 }
@@ -175,7 +176,7 @@ button {
 .loggout:hover {
   cursor: -webkit-grab;
   cursor: grab;
-  border: 2px solid #9693d8;
+  border: 2px solid #a8a5e5;
   -webkit-box-shadow: 2px 2px 4px black;
           box-shadow: 2px 2px 4px black;
 }
@@ -216,7 +217,7 @@ button {
   left: 10px;
   bottom: 6px;
   color: #7777cb;
-  background-color: #9693d8;
+  background-color: #a8a5e5;
   font-size: 3rem;
   font-weight: 500;
   text-align: center;
@@ -324,7 +325,7 @@ html {
   font-size: 62.5%;
   font-family: 'Roboto Slab', serif;
   padding-bottom: 10rem;
-  background: linear-gradient(160deg, #030b2c 8%, #7777cb 60% 30%, #9693d8 100%) no-repeat;
+  background: linear-gradient(160deg, #030b2c 8%, #7777cb 60% 30%, #a8a5e5 100%) no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -399,8 +400,8 @@ h5 {
   padding: 0;
   margin: 2rem 0;
   max-width: 93%;
-  color: #9693d8;
-  font-size: 1.9rem;
+  color: #a8a5e5;
+  font-size: 1.8rem;
 }
 
 .textAlignCenter {
