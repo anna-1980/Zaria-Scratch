@@ -106,13 +106,12 @@ button {
 }
 
 #goBack {
-  position: absolute;
-  top: 56vh;
-  right: 50vw;
+  display: inline-block;
+  margin: auto 0;
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
+  -webkit-transform: translate(5%, 50%);
+          transform: translate(5%, 50%);
 }
 
 #goBack:hover {
@@ -134,13 +133,13 @@ button {
 }
 
 .signInButton {
-  position: absolute;
+  display: inline-block;
+  margin: auto 0;
   background-color: #7777cb;
-  right: 50vw;
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
+  -webkit-transform: translate(5%, 50%);
+          transform: translate(5%, 50%);
 }
 
 .signInButton:hover {
