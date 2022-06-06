@@ -52,13 +52,15 @@ function App() {
       <header>
        
       <div className="container-column">
-        <h2 id="top">
-            Zaria's   
-            <div className="logo"></div>
+        <Link to={`/home`} > 
+          <h2 id="top">
+              Zaria's   
+              <div className="logo"></div>
           </h2>
           <h2>
             Scratch projects
           </h2>
+          </Link>
       </div>
       <AuthState>
         <ToastContainer/>
