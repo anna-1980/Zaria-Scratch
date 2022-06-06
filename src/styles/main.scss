@@ -198,7 +198,7 @@ div{
     color: $textColor;
     text-align: left;
     background-color: $bacgrForText;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   .projectDescription{
@@ -209,6 +209,7 @@ div{
     transform-origin: bottom;
     // transform: translate(10%, -80%);
     background-color: $bacgrForText;
+    font-size: 2rem;
     color: $textColor;
     padding: 0.5rem;
   }
