@@ -19,7 +19,7 @@ const NewProject = () => {
         <div className='textAlignCenter'>
             <h3 >Add New Project </h3>
         </div>
-        <form  autoComplete='off' onSubmit={handleSubmit(onSubmit)} >
+        <form  className="basicForm" autoComplete='off' onSubmit={handleSubmit(onSubmit)} >
             <div className='formFields'>
                 <label htmlFor='Title' >
                 Title:

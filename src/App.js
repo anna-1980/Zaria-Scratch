@@ -52,7 +52,7 @@ function App() {
       <header>
        
       <div className="container-column">
-        <Link to={`/home`} > 
+        <Link style={{textDecoration: 'none'}}  to={`/home`} > 
           <h2 id="top">
               Zaria's   
               <div className="logo"></div>

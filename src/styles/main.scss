@@ -46,6 +46,7 @@ h2{
         background-size:200% 200%;
     -webkit-background-clip: text;
     animation: shimmer 1.5s linear infinite ;
+    text-decoration: none;
 }
 
 h3{
@@ -59,6 +60,11 @@ h4{
   color: $standoutOrange;
   font-size: 2.5rem;
   text-align: center;
+}
+
+Link{
+  text-decoration: none;
+  color: red;
 }
 
 .userName{
