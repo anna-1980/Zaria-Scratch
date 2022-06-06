@@ -3,7 +3,7 @@
     height: 100%;
     width: 100%;
     @include flex(column, center, flex-start);
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 10px;
     background-color: $color2;
     color: white;
@@ -14,7 +14,8 @@
 
 textarea{
     font-family: 'Roboto Slab', serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0.5rem;
 }
 
 
