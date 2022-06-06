@@ -2,6 +2,7 @@
 @import "form.scss";
 @import "buttons.scss";
 @import "specialEffects.scss";
+@import '_mediaQuery';
 
 *{
     margin: 0;
@@ -150,8 +151,17 @@ div{
   
   // background-color: red;
 }
+#singleProjectContainer{
+  @include flex(column, center, center);
+  width: 70vw ;
+  
+}
 
-
+.singleProjectFrame{
+ 
+  width: 100%;
+  height: 50vw;
+}
 
 
 .container {
@@ -198,7 +208,7 @@ div{
     color: $textColor;
     text-align: left;
     background-color: $bacgrForText;
-    font-size: 2.2rem;
+    font-size: 1.9rem;
   }
 
   .projectDescription{
@@ -209,7 +219,7 @@ div{
     transform-origin: bottom;
     // transform: translate(10%, -80%);
     background-color: $bacgrForText;
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: $textColor;
     padding: 0.5rem;
   }
@@ -228,3 +238,4 @@ div{
     z-index: 3;
     transform: translateY(15px);
   }
+
