@@ -38,6 +38,7 @@ const isAdminLoggedIn = isAdmin ;
           { isAdminLoggedIn ? (
             <Link to={`/userProfile/upload`}>
               <button className="signInButton" id="hideMe">Add Project</button>
+              
             </Link>
           ) : <div className="container-column">
             <p className="msgForUser">Welcome dear user, if you like my projects <br></br>write to me. I would be happy to chat</p>
@@ -56,9 +57,9 @@ const isAdminLoggedIn = isAdmin ;
       )
       : <Navigate to="/signin"/>}
       
-    <Link to={`/home`} >
+    {/* <Link to={`/home`} >
         <button id='goBack'>Go Back</button>
-    </Link>
+    </Link> */}
     </>
   )
 }
