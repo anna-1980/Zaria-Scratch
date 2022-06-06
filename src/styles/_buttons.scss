@@ -20,11 +20,13 @@ button{
   }
 
   #goBack{
-
+    // position: absolute;
+    // top:56vh;
+    // right:50vw;
     display: inline-block;
     margin: auto 0;
-    transform-origin: right;
-    transform: translate(5%, 50%);
+    transform-origin: center;
+    transform: translate(100%, 50%);
     &:hover{
         border: 1px solid $gold4;
         box-shadow: 2px 2px 4px black;
@@ -32,7 +34,11 @@ button{
   }
 
   #goBackUserProfile{
-
+    // position: absolute;
+    // top:56vh;
+    // right:50vw;
+    // transform-origin: right;
+    // transform: translate(50%, 50%);
     border: 1px solid transparent;
     &:hover{
         border: 1px solid $gold4;
@@ -42,7 +48,8 @@ button{
   }
 
   .signInButton{
-
+    // position: absolute;
+    // right:50vw;
     display: inline-block;
     margin: auto 0;
     background-color: $color2;
@@ -56,6 +63,9 @@ button{
   }
 
   #hideMe{
+     position: absolute;
+     right:50vw;
+     transform: translate(50%, 50%);
     z-index: -1;
   }
 

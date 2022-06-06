@@ -29,6 +29,11 @@ label {
   margin: 0.5rem;
 }
 
+textarea {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.4rem;
+}
+
 .registrationForm {
   border: 2px solid;
 }
@@ -108,10 +113,10 @@ button {
 #goBack {
   display: inline-block;
   margin: auto 0;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transform: translate(5%, 50%);
-          transform: translate(5%, 50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translate(100%, 50%);
+          transform: translate(100%, 50%);
 }
 
 #goBack:hover {
@@ -149,6 +154,10 @@ button {
 }
 
 #hideMe {
+  position: absolute;
+  right: 50vw;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
   z-index: -1;
 }
 
