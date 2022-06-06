@@ -6,13 +6,15 @@ import Loggout from './Loggout';
 
 const Iframes = ({projects}) => {
   const { isAuthenticated, user } = useAuth(); 
-  let projectNumber = [];
-  let url = `${
-    projects.map(({author, _id, url, description, title}) => {
-      return  projectNumber.push(url.split('/')[4]) 
-    })
-  }`;
-  console.log(projectNumber)
+  // let projectNumber = [];
+  // let url = `${
+  //   projects.map(({author, _id, url, description, title}) => {
+  //     // return  projectNumber.push(url.split('/')[4])
+  //     return  projectNumber.push({description, title, url })
+      
+  //   })
+  // }`;
+  // console.log(projectNumber)
   let params = useParams();
   let location = useLocation();
   let navigate = useNavigate();
@@ -26,33 +28,24 @@ const Iframes = ({projects}) => {
     <div>
      
      <div className="container">
-
-        {/* <Link to={'/singleProject/'} key={_id}>
-            <div className="iframeDiv" >
-                <iframe  
-                    className="thumbnail"
-                    id="allFrames"
-                    title='game' 
-                    src={url}
-                    ></iframe>
-            </div></Link> */}
-
          
             <div className="container">
-            {projectNumber.map((id) => {
+            {projects.map(({id, url, description, title}) => {
               return (
                  
                 <Link to={ `/singleProject/${id}` } key={_id}>
-                
+                <div className='container-column'>
+                  <h1 className='projectTitle'>Title: {title}</h1>
                 <iframe  
                     className="thumbnail"
                     id="allFrames"
                     title='game' 
-                    src= {`https://scratch.mit.edu/projects/${id}/embed`}
+                    src= {`https://scratch.mit.edu/projects/${url.split('/')[4]}/embed`}
                     ></iframe>
-              
+                <h1 className='projectDescription'>{description}</h1>
+
+                </div>
               </Link>
-               
               );
             })}
         </div>

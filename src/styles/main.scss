@@ -179,6 +179,38 @@ div{
       padding: 0.5rem;
       cursor: pointer;
       border: 2px solid rgb(58, 41, 190);
+       
+  }
+
+  .allFrames{
+    position: relative;
+  }
+
+  .projectTitle{
+    position: absolute;
+    display: inline-block;
+    width: 85%;
+    top: 7%;
+    left: 7%;
+    padding-left: 1rem;
+    transform-origin: top;
+    text-decoration: underline;
+    color: $textColor;
+    text-align: left;
+    background-color: $bacgrForText;
+    font-size: 2.4rem;
+  }
+
+  .projectDescription{
+    position: absolute;
+    bottom: 5%;
+    left: 7%;
+    width: 85%;
+    transform-origin: bottom;
+    // transform: translate(10%, -80%);
+    background-color: $bacgrForText;
+    color: $textColor;
+    padding: 0.5rem;
   }
 
   .logo{
