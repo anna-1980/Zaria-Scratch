@@ -52,21 +52,4 @@ const LoginScreen = () => {
 
 export default LoginScreen
 
-// const [loading, setLoading] = useState(false);
-// const [user, setUser] = useState({});
-
-// useEffect(() => {
-//   const getUser = async () => {
-//   try {
-//     // const { data } = await axios.get("http://localhost:5000/api/projects/");
-//     const { data } = await axios.get("https://sleepy-sea-73067.herokuapp.com/api/auth/signin");
-//     setLoading(true);
-//     setUser(data);
-//     console.log(`get the user: ${data}`);
-//     setLoading(false);
-//   } catch (error) {
-//     return alert ("Sorry something went wrong getting your details")
-//   }
-// };
-// getUser();
-// }, []);
+ 
