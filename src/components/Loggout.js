@@ -9,7 +9,7 @@ const Loggout = () => {
     <div>
           {
           isAuthenticated ? 
-          <div  className='loggout' onClick={signout}>(Loggout)</div>
+          <div  className='loggout' onClick={signout}>(Logout)</div>
           : 
           <Link to={`/signin`}>
           <button  className='signInButton'>Sign In</button>
