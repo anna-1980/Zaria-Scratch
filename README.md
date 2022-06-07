@@ -1,5 +1,5 @@
 A website for my daughter, so she can share her Scratch projects with our low-tech family members :)
-Since the -clent- is a 10 year old the -sign in- button is "hidden" all the way at the end of the home page, which displays all the projects collection.
+Since the -client- is a 10 year old the -sign in- button is "hidden" all the way at the end of the home page, which displays all the projects collection.
 -Client- can inform the family member/friend of the buttons location upon sharing the link
 
 After registering a user will have an option to sent a message 
