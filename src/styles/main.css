@@ -530,6 +530,13 @@ h4 {
   text-align: center;
 }
 
+.pleaseSignIn {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #fbe5a9;
+}
+
 Link {
   text-decoration: none;
   color: red;
