@@ -21,7 +21,7 @@ const SingleProject = ({projects}) => {
           isAuthenticated ? 
             <Link to={`/userProfile`}   >
               <button className='backToUserProfile2 smaller'>Profile
-                <button className="tiptext"  >back to your Profile</button>
+                <button className="tiptext"  >sent me a Message <br></br>from your Profile</button>
               </button>
             </Link>
           : 
