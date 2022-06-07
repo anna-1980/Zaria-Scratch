@@ -14,7 +14,7 @@ const Iframes = ({projects}) => {
   let _id = `646527705`
  
   return (
-    <div>
+    <div className='container-column'>
      
      <div className="container">
          
@@ -64,7 +64,11 @@ const Iframes = ({projects}) => {
             );
           }) 
         }
-        </div>
+    
+       
+
+    </div>
+    </div>
         {
           isAuthenticated ? 
          <div className='container-column'>
@@ -74,14 +78,13 @@ const Iframes = ({projects}) => {
         < Loggout />
          </div>
           : 
+          <div className='container-column'>
           <Link to={`/signin`}>
-          <button  className='signInButton'>Sign In</button>
-        </Link>
+            <button  className='signInButton'>Sign In</button>
+          </Link>
+          <h5 className='pleaseSignIn'>To see all projects please Sign in</h5>
+          </div>
         }
-       
-
-    </div>
-    
 
     </div>
   );
