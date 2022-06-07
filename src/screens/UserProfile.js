@@ -41,11 +41,11 @@ const isAdminLoggedIn = isAdmin ;
               
             </Link>
           ) : <div className="container-column">
+            <Link to={`/home`} >
+                <button id='goBackUserProfile'>Go See All Projects</button>
+            </Link>
             <p className="msgForUser">Welcome dear user, if you like my projects <br></br>write to me. I would be happy to chat</p>
             <BasicForm />
-            <Link to={`/home`} >
-                <button id='goBackUserProfile'>Go Back</button>
-            </Link>
           </div>
           }
     

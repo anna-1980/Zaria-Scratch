@@ -153,6 +153,8 @@ button {
 .signInButton {
   display: inline-block;
   margin: auto 0;
+  margin-bottom: 1.2rem;
+  border: 2px solid transparent;
   background-color: #7777cb;
   -webkit-transform-origin: right;
           transform-origin: right;
@@ -174,18 +176,20 @@ button {
   z-index: -1;
 }
 
-.loggout {
+.logout {
   -webkit-transform-origin: right;
           transform-origin: right;
   background-color: transparent;
   border: 2px solid transparent;
+  border-radius: 5px;
   color: pink;
+  padding: 0.2rem;
   font-size: 1.8rem;
   -webkit-transform: translate(5%, 5%);
           transform: translate(5%, 5%);
 }
 
-.loggout:hover {
+.logout:hover {
   cursor: -webkit-grab;
   cursor: grab;
   border: 2px solid #a8a5e5;
