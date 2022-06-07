@@ -16,17 +16,17 @@
 @media screen and (max-width: 1060px) {
     .singleProjectFrame{
      
-        height: 60vw;
+        height: 65vw !important;
       }
 
       #singleProjectContainer{
 
-        width: 80vw   !important ;
+        width: 85vw   !important ;
         height: 60vw;
       }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .singleProjectFrame{
       
         height: 45vh !important; 
@@ -42,7 +42,7 @@
 @media screen and (max-width: 420px) {
     .singleProjectFrame{
       
-        height: 35vh !important; 
+        height: 38vh !important; 
       }
 
       #singleProjectContainer{
@@ -50,4 +50,5 @@
         width: 95vw   !important ;
         height: 100%;
       }
+    
 }

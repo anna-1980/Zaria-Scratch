@@ -42,7 +42,7 @@ const LoginScreen = () => {
           </button>
         </form>
 
-    <Link to={`/home`} >
+    <Link to={`/home`} className='goBackButtonCenter'>
         <button id='goBack'>Go Back</button>
     </Link>
 

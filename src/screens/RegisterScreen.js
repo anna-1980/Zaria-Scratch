@@ -55,7 +55,7 @@ const RegisterScreen = () => {
             </form>
      {/* after successful registration take user to userProfile screen       
      {token && <Navigate to="/userProfile"/> }    */}
-    <Link to={`/home`} >
+    <Link to={`/home`} className='goBackButtonCenter'>
             <button id='goBack'>Go Back</button>
             </Link>
     </>
