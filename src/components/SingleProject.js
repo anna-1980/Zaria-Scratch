@@ -1,34 +1,37 @@
 import React from 'react'
- 
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useParams } from "react-router";
+import { useAuth } from '../context/AuthContext';
  
-
-
 const SingleProject = ({projects}) => {
-    let params = useParams();
-    let location = useLocation();
-    let navigate = useNavigate();
+  let location = useLocation();
+  const { isAuthenticated, user } = useAuth(); 
 
-const singleProject = location.pathname ? location.pathname.split('/')[2] : 1;
- 
+  const singleProject = location.pathname ? location.pathname.split('/')[2] : 1;
+
   return (
     <div> 
 
      <div   id="singleProjectContainer">
                 <iframe className='singleProjectFrame' src={`https://scratch.mit.edu/projects/${singleProject}/embed`}></iframe>
-     
         <Link to={`/home`} >
             <button >Go Back</button>
+        </Link>
+       
+        {
+          isAuthenticated ? 
+            <Link to={`/userProfile`}   >
+              <button className='backToUserProfile2 smaller'>Profile
+                <button className="tiptext"  >sent me a Message <br></br>from your Profile</button>
+              </button>
             </Link>
-       
-     
-     
-        
+          : 
+          <Link to={`/userProfile`}   >
+          <button className='backToUserProfile2 smaller'>Sign In
+            <button className="tiptext"  >To sent a message <br></br>Sign In</button>
+          </button>
+        </Link>
+        }
      </div>
-       
-       
-  
     </div>
   )
 }

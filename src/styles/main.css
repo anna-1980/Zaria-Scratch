@@ -90,16 +90,16 @@ input:focus {
 
 button {
   border: none;
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-  z-index: 1;
-  background-color: #fada4b;
-  border-radius: 10px;
+  margin-top: 0.5rem;
   padding: 1rem 2rem;
+  border-radius: 10px;
+  background-color: #fada4b;
   font-size: 2rem;
-  z-index: 1;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  z-index: 1;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .scrollButton {
@@ -112,18 +112,29 @@ button {
 }
 
 #goBack {
-  display: inline-block;
-  margin: auto 0;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: translate(100%, 50%);
-          transform: translate(100%, 50%);
+  margin: 0.7rem;
 }
 
 #goBack:hover {
   border: 1px solid #fbe5a9;
   -webkit-box-shadow: 2px 2px 4px black;
           box-shadow: 2px 2px 4px black;
+}
+
+.goBackButtonCenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #goBackUserProfile {
@@ -233,6 +244,27 @@ button {
   opacity: 0.8;
 }
 
+.backToUserProfile2 {
+  position: absolute;
+  right: -1%;
+  bottom: 2%;
+  padding: 0.1rem 1rem;
+  color: #7777cb;
+  background-color: #a8a5e5;
+  font-size: 3rem;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.backToUserProfile2:hover {
+  background-color: #f370d9;
+}
+
+.backToUserProfile2:hover .tiptext {
+  visibility: visible;
+  opacity: 0.8;
+}
+
 .formButton {
   margin: 1rem auto;
   background-color: #eba31f;
@@ -326,15 +358,15 @@ button {
 
 @media screen and (max-width: 1060px) {
   .singleProjectFrame {
-    height: 60vw;
+    height: 65vw !important;
   }
   #singleProjectContainer {
-    width: 80vw   !important;
+    width: 85vw   !important;
     height: 60vw;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .singleProjectFrame {
     height: 45vh !important;
   }
@@ -346,7 +378,7 @@ button {
 
 @media screen and (max-width: 420px) {
   .singleProjectFrame {
-    height: 35vh !important;
+    height: 38vh !important;
   }
   #singleProjectContainer {
     width: 95vw   !important;
@@ -648,5 +680,12 @@ iframe {
   z-index: 3;
   -webkit-transform: translateY(15px);
           transform: translateY(15px);
+}
+
+.smaller {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  font-size: 2.2rem;
+  padding: 0.5rem 1rem;
 }
 /*# sourceMappingURL=main.css.map */

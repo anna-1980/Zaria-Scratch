@@ -1,14 +1,13 @@
 button{
-   
   border:none;
-  cursor: grabbing;
-  z-index: 1;
-  background-color: $gold1;
-  border-radius: 10px;
+  margin-top: 0.5rem;
   padding: 1rem 2rem;
+  border-radius: 10px;
+  background-color: $gold1;
   font-size: 2rem;
-  z-index: 1;
   transition: 0.3s;
+  z-index: 1;
+  cursor: grabbing;
 }
 
 .scrollButton{
@@ -20,17 +19,15 @@ button{
 }
 
 #goBack{
-  // position: absolute;
-  // top:56vh;
-  // right:50vw;
-  display: inline-block;
-  margin: auto 0;
-  transform-origin: center;
-  transform: translate(100%, 50%);
+  margin: 0.7rem;
   &:hover{
       border: 1px solid $gold4;
       box-shadow: 2px 2px 4px black;
   }
+}
+
+.goBackButtonCenter{
+  @include flex(column, center, center);
 }
 
 #goBackUserProfile{
@@ -122,6 +119,7 @@ button{
   font-weight: 500;
   text-align: center;
   padding: 0.1rem 1rem;
+  
   &:hover{
     .tiptext{
       visibility: visible;
@@ -130,6 +128,25 @@ button{
     background-color: rgb(243, 112, 217);
   }
  
+}
+
+.backToUserProfile2{
+  position: absolute;
+  right: -1%;
+  bottom: 2%;
+  padding: 0.1rem 1rem;
+  color: $color2;
+  background-color: $color3;
+  font-size: 3rem;
+  font-weight: 500;
+  z-index: 2;
+  &:hover{
+    .tiptext{
+      visibility: visible;
+      opacity: 0.8;
+    }
+    background-color: rgb(243, 112, 217);
+  }
 }
 
 .formButton{

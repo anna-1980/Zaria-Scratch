@@ -6,24 +6,13 @@ import { useAuth } from '../context/AuthContext';
 
 const Iframes = ({projects}) => {
   const { isAuthenticated, user } = useAuth(); 
-  // let projectNumber = [];
-  // let url = `${
-  //   projects.map(({author, _id, url, description, title}) => {
-  //     // return  projectNumber.push(url.split('/')[4])
-  //     return  projectNumber.push({description, title, url })
-      
-  //   })
-  // }`;
-  // console.log(projectNumber)
+ 
   let params = useParams();
   let location = useLocation();
   let navigate = useNavigate();
   console.log(location);
-  // console.log(url);
   let _id = `646527705`
-  // let url = `https://scratch.mit.edu/projects/695288431/embed`
-  // let url = `https://science-arcade.netlify.app/Games`
-
+ 
   return (
     <div>
      
