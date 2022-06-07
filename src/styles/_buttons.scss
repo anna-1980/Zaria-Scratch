@@ -31,11 +31,6 @@ button{
 }
 
 #goBackUserProfile{
-  // position: absolute;
-  // top:56vh;
-  // right:50vw;
-  // transform-origin: right;
-  // transform: translate(50%, 50%);
   border: 1px solid transparent;
   &:hover{
       border: 1px solid $gold4;
@@ -45,8 +40,6 @@ button{
 }
 
 .signInButton{
-  // position: absolute;
-  // right:50vw;
   display: inline-block;
   margin: auto 0;
   background-color: $color2;

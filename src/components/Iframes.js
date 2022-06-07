@@ -23,7 +23,8 @@ const Iframes = ({projects}) => {
               return (
                  
                 <Link to={ `/singleProject/${url.split('/')[4]}` } key={_id}>
-                <div className='container-column'>
+                <div className='color3'>
+                <div className='container-column '>
                   <h1 className='projectTitle'>Title: {title}</h1>
                 <iframe  
                     className="thumbnail"
@@ -33,6 +34,7 @@ const Iframes = ({projects}) => {
                     ></iframe>
                 <h1 className='projectDescription'>{description}</h1>
 
+                </div>
                 </div>
               </Link>
               );
