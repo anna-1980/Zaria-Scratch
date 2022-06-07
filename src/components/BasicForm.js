@@ -1,4 +1,8 @@
+import { useAuth } from '../context/AuthContext';
+
+
 const BasicForm= () => {
+  const { user  } = useAuth();
     return(
         <div className="form">
         <form name="contact" method="post" className="basicForm">
@@ -14,7 +18,7 @@ const BasicForm= () => {
           
            
             <label htmlFor="email" >Email</label>  
-            <input type="email" name="email" id="email" placeholder="Enter your email here" required />
+            <input type="email" name="email" id="email" placeholder="Enter your email here" value={user.email} required />
          
             
             <label htmlFor="message" className="msgText"   >Message</label> 
