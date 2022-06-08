@@ -54,7 +54,7 @@ function App() {
       <div className="container-column">
         <Link style={{textDecoration: 'none'}}  to={`/home`} > 
           <h2 id="top">
-              Zaria's   
+              Gamerette's   
               <div className="logo"></div>
           </h2>
           <h2>
