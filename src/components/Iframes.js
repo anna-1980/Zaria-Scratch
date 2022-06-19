@@ -1,17 +1,14 @@
 import React from 'react'
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useParams } from "react-router";
+import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Loggout from './Loggout';
 
 const Iframes = ({projects}) => {
-  const { isAuthenticated, user } = useAuth(); 
- 
-  let params = useParams();
+  const { isAuthenticated } = useAuth(); 
   let location = useLocation();
-  let navigate = useNavigate();
+ 
   console.log(location);
-  let _id = `646527705`
+   
  
   return (
     <div className='container-column'>
@@ -22,7 +19,7 @@ const Iframes = ({projects}) => {
       
                {
           isAuthenticated ? 
-            projects.map(({id, url, description, title}) => {
+            projects.map(({_id, url, description, title}) => {
             return (
                
               <Link to={ `/singleProject/${url.split('/')[4]}` } key={_id}>
@@ -43,7 +40,7 @@ const Iframes = ({projects}) => {
             );
           }) 
           : 
-          projects.slice(0, 3).map(({id, url, description, title}) => {
+          projects.slice(0, 3).map(({_id, url, description, title}) => {
             return (
                
               <Link to={ `/singleProject/${url.split('/')[4]}` } key={_id}>
@@ -53,7 +50,7 @@ const Iframes = ({projects}) => {
               <iframe  
                   className="thumbnail"
                   id="allFrames"
-                  title='game' 
+                  title='project' 
                   src= {`https://scratch.mit.edu/projects/${url.split('/')[4]}/embed`}
                   ></iframe>
               <h1 className='projectDescription'>{description}</h1>
