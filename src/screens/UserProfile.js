@@ -5,10 +5,7 @@ import BasicForm from "../components/BasicForm.js";
 
 const UserProfile = () => {
 
-let location = useLocation();
-let displayButton = location.pathname !== `/userProfile/upload`
- 
-const {isAuthenticated, user, token, isAdmin } = useAuth();
+const {isAuthenticated, isAdmin } = useAuth();
 //  if (!token) return <Navigate to="/signin"/> 
  const signedUser = localStorage.getItem('user') 
 ? JSON.parse(localStorage.getItem('user'))

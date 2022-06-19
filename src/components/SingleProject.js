@@ -12,7 +12,7 @@ const SingleProject = ({projects}) => {
     <div> 
 
      <div   id="singleProjectContainer">
-                <iframe className='singleProjectFrame' src={`https://scratch.mit.edu/projects/${singleProject}/embed`}></iframe>
+                <iframe title="project" className='singleProjectFrame' src={`https://scratch.mit.edu/projects/${singleProject}/embed`}></iframe>
         <Link to={`/home`} >
             <button >Go Back</button>
         </Link>
