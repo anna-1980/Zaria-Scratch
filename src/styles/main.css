@@ -105,8 +105,8 @@ button {
 .scrollButton {
   position: fixed;
   border: 1px solid #ed5353;
-  bottom: 15vh;
-  right: 2rem;
+  bottom: 8vh;
+  right: 1rem;
   -webkit-box-shadow: 2px 2px 8px black;
           box-shadow: 2px 2px 8px black;
 }
