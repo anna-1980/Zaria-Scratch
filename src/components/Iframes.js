@@ -26,7 +26,7 @@ const Iframes = ({projects, loading}) => {
                   className="thumbnail"
                   id="allFrames"
                   title='project' 
-                  src= {`https://scratch.mit.edu/projectss/${url.split('/')[4]}/embed`}
+                  src= {`https://scratch.mit.edu/projects/${url.split('/')[4]}/embed`}
                   ></iframe>
               <h1 className='projectDescription'>{description}</h1>
 
@@ -47,7 +47,7 @@ const Iframes = ({projects, loading}) => {
                   className="thumbnail"
                   id="allFrames"
                   title='game' 
-                  src= {`https://scratch.mit.edu/projectss/${url.split('/')[4]}/embed`}
+                  src= {`https://scratch.mit.edu/projects/${url.split('/')[4]}/embed`}
                   ></iframe>
               <h1 className='projectDescription'>{description}</h1>
 
