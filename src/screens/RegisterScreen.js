@@ -1,13 +1,12 @@
 import React from 'react'
-import { Link, useNavigate, Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../context/AuthContext';
 //rememebr components 
 
 const RegisterScreen = () => {
-  const navigate = useNavigate();
-  const {register, handleSubmit, watch, formState: {errors}} = useForm();
-  const userError =  errors.name && <div className='formValidation'>name is required</div> ;
+  const {register, handleSubmit, formState: {errors}} = useForm();
+//   const userError =  errors.name && <div className='formValidation'>name is required</div> ;
   
   const { isAuthenticated, signup } = useAuth();
   

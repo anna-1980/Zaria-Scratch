@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
  
 const SingleProject = ({projects}) => {
   let location = useLocation();
-  const { isAuthenticated, user } = useAuth(); 
+  const { isAuthenticated} = useAuth(); 
 
   const singleProject = location.pathname ? location.pathname.split('/')[2] : 1;
 
@@ -12,7 +12,7 @@ const SingleProject = ({projects}) => {
     <div> 
 
      <div   id="singleProjectContainer">
-                <iframe className='singleProjectFrame' src={`https://scratch.mit.edu/projects/${singleProject}/embed`}></iframe>
+                <iframe title='scratch-projects' className='singleProjectFrame' src={`https://scratch.mit.edu/projects/${singleProject}/embed`}></iframe>
         <Link to={`/home`} >
             <button >Go Back</button>
         </Link>

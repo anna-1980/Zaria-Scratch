@@ -1,10 +1,10 @@
-import { Outlet, Link, Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../context/AuthContext';
-import { useEffect } from "react";
+ 
 
 const NewProject = () => {
-    const {register, handleSubmit, watch, formState: {errors}} = useForm();
+    const {register, handleSubmit } = useForm();
    
   const onSubmit = (formData) => {
       newProject(formData)

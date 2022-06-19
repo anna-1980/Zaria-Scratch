@@ -1,28 +1,21 @@
 import React from 'react'
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useParams } from "react-router";
+import { Link } from 'react-router-dom';
+// import { useParams } from "react-router";
 import { useAuth } from '../context/AuthContext';
 import Loggout from './Loggout';
-
-const Iframes = ({projects}) => {
-  const { isAuthenticated, user } = useAuth(); 
  
-  let params = useParams();
-  let location = useLocation();
-  let navigate = useNavigate();
-  console.log(location);
-  let _id = `646527705`
+
+const Iframes = ({projects, loading}) => {
+  const {isAuthenticated} = useAuth(); 
  
   return (
     <div className='container-column'>
-     
-     <div className="container">
-         
-            <div className="container">
+   
+      <div className="container">
       
                {
           isAuthenticated ? 
-            projects.map(({id, url, description, title}) => {
+            projects.map(({_id, url, description, title}) => {
             return (
                
               <Link to={ `/singleProject/${url.split('/')[4]}` } key={_id}>
@@ -32,8 +25,8 @@ const Iframes = ({projects}) => {
               <iframe  
                   className="thumbnail"
                   id="allFrames"
-                  title='game' 
-                  src= {`https://scratch.mit.edu/projects/${url.split('/')[4]}/embed`}
+                  title='project' 
+                  src= {`https://scratch.mit.edu/projectss/${url.split('/')[4]}/embed`}
                   ></iframe>
               <h1 className='projectDescription'>{description}</h1>
 
@@ -43,7 +36,7 @@ const Iframes = ({projects}) => {
             );
           }) 
           : 
-          projects.slice(0, 3).map(({id, url, description, title}) => {
+          projects.slice(0, 3).map(({_id, url, description, title}) => {
             return (
                
               <Link to={ `/singleProject/${url.split('/')[4]}` } key={_id}>
@@ -54,7 +47,7 @@ const Iframes = ({projects}) => {
                   className="thumbnail"
                   id="allFrames"
                   title='game' 
-                  src= {`https://scratch.mit.edu/projects/${url.split('/')[4]}/embed`}
+                  src= {`https://scratch.mit.edu/projectss/${url.split('/')[4]}/embed`}
                   ></iframe>
               <h1 className='projectDescription'>{description}</h1>
 
@@ -67,8 +60,8 @@ const Iframes = ({projects}) => {
     
        
 
-    </div>
-    </div>
+      </div>
+      
         {
           isAuthenticated ? 
          <div className='container-column'>

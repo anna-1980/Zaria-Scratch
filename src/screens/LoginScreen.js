@@ -7,7 +7,7 @@ const LoginScreen = () => {
   const {
     register, 
     handleSubmit, 
-    watch, formState: {errors}} = useForm();
+    formState: {errors}} = useForm();
   const { isAuthenticated, signin, loading } = useAuth();
   const onSubmit = (formData) => signin(formData);
   if(loading) return <Loader />
