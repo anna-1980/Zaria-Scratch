@@ -702,7 +702,7 @@ div {
   margin-left: 2rem;
   background-color: red;
   background-size: cover;
-  background-image: url("../../public/favIcon.png");
+  background-image: url("../assets/profilePic02.png");
   height: 64px;
   width: 64px;
   z-index: 3;
