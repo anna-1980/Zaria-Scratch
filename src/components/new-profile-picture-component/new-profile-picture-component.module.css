@@ -1,0 +1,17 @@
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+}
+
+.form-container__paragraph {
+  text-decoration: none;
+  font-size: 2rem;
+  background-color: red;
+}
+/*# sourceMappingURL=new-profile-picture-component.module.css.map */

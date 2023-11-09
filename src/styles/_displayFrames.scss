@@ -43,12 +43,18 @@
       
   }
 
+  .iFrameLinkContainer{
+    position: relative;
+  }
+
   .allFrames{
     position: relative;
   }
   .projectTitle{
     position: absolute;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 90%;
     top: 4%;
     left: 5%;
@@ -61,6 +67,7 @@
     text-align: left;
     background-color: $bacgrForText;
     font-size: 1.9rem;
+   
   }
 
   .projectDescription{

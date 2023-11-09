@@ -156,3 +156,11 @@ button{
       box-shadow: $boxShadow;
     }
 }
+
+.btn-del{
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
