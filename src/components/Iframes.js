@@ -4,23 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import Loggout from "./Loggout";
 
 const Iframes = ({ projects }) => {
-  const { isAuthenticated, deleteProject } = useAuth();
-  // let location = useLocation();
-
-  // console.log(location);
-  // const onDeleteBtn = (id, adminId) => {
-  //   alert(`Are you sure you want to delete this project   ${id} ??`);
-  // };
-  // const signedUser = localStorage.getItem("user")
-  //   ? JSON.parse(localStorage.getItem("user"))
-  //   : {};
-
-  // const onDeleteBtn = (id, user) => {
-  //   console.log("ID >>>", id);
-  //   console.log("USER ID >>>", signedUser);
-  //   deleteProject(id, signedUser)
-  //   // alert("alert")
-  // };
+  const { isAuthenticated } = useAuth();
 
   return (
     <div className="container-column">
@@ -36,13 +20,6 @@ const Iframes = ({ projects }) => {
                   >
                     <div className="color3">
                       <div className="container-column ">
-                      {/* <button
-                        type="button"
-                        onClick={onDeleteBtn(_id)}
-                        className="btn-del"
-                      >
-                        X
-                      </button> */}
                         <h1 className="projectTitle">Title: {title}</h1>
                         <iframe
                           className="thumbnail"

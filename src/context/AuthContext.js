@@ -132,10 +132,6 @@ const AuthState = ({ children }) => {
   };
 
   const deleteProject = async (id, user) => {
-    // const body = {
-    //   user: user,
-    //   id: id,
-    // };
     console.log("DEL REQ BODY", id);
     console.log("DEL USER", user);
 

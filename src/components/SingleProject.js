@@ -7,29 +7,10 @@ const SingleProject = ({ projects }) => {
   const { isAuthenticated, isAdmin, deleteProject } = useAuth();
 
   const singleProject = location.pathname ? location.pathname.split("/")[2] : 1;
-  // console.log("FROM SINGLE PROJECT", location);
-  const signedUser = localStorage.getItem("user")
-    ? JSON.parse(localStorage.getItem("user"))
-    : {};
-
-  const onDeleteBtn = (id, user) => {
-    console.log("ID >>>", id);
-    console.log("USER ID >>>", signedUser);
-    deleteProject(id, signedUser);
-    // return <Navigate to="/home" />;
-  };
 
   return (
     <div>
       <div id="singleProjectContainer">
-        {isAdmin ? (
-          <button className="btn-del" onClick={() => onDeleteBtn(location.state.id)}  >
-          X
-        </button>
-        ): (
-          <></>
-        ) 
-        }
         <iframe
           title="project"
           className="singleProjectFrame"
