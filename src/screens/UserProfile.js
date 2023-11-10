@@ -2,11 +2,10 @@ import { Outlet, Link, useLocation, Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import Loggout from "../components/Loggout";
 import BasicForm from "../components/BasicForm.js";
-import NewProfilePicture from "../components/new-profile-picture-component/NewProfilePicture";
+import ProjectsListComponent from "../components/projects-list-component.jsx";
 
-const UserProfile = () => {
+const UserProfile = ({projects}) => {
   const { isAuthenticated, isAdmin } = useAuth();
-  //  if (!token) return <Navigate to="/signin"/>
   const signedUser = localStorage.getItem("user")
     ? JSON.parse(localStorage.getItem("user"))
     : {};
@@ -15,6 +14,7 @@ const UserProfile = () => {
   // ? JSON.parse(localStorage.getItem('isAdmin')) : {};
   // console.log(isAdminLoggedIn);
 
+  console.log("FROM USER PROFILE", projects);
   return (
     <>
       <div className="spacer2rem"></div>
@@ -25,15 +25,22 @@ const UserProfile = () => {
       </div>
 
       {isAuthenticated ? (
-        <div>
+        <div className="container-column">
+          
           {isAdminLoggedIn ? (
-            <div>
+            <div className="container-column">
               {/* <NewProfilePicture /> */}
+              <div className="spacer2rem"></div>
             <Link to={`/userProfile/upload`}>
-              <button className="signInButton" id="hideMe">
+              <button  >
                 Add Project
               </button>
             </Link>
+            <div className="spacer2rem"></div>
+              <h4>List of projects</h4>
+      
+            <Outlet />
+            <ProjectsListComponent projects={projects} />
             </div>
           ) : (
             <div className="container-column">
@@ -44,11 +51,12 @@ const UserProfile = () => {
                 Welcome dear user, if you like my projects <br></br>write to me.
                 I would be happy to chat
               </p>
+               
               <BasicForm />
+              
             </div>
           )}
 
-          <Outlet />
         </div>
       ) : (
         <Navigate to="/signin" />

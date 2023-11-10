@@ -162,5 +162,10 @@ button{
   position: absolute;
   top: 0;
   right: 0;
-
+  z-index: 100;
+   &:hover{
+      background-color: $standoutRed;
+      box-shadow: $boxShadow;
+      cursor: pointer;
+    }
 }

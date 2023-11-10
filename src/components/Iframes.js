@@ -4,20 +4,23 @@ import { useAuth } from "../context/AuthContext";
 import Loggout from "./Loggout";
 
 const Iframes = ({ projects }) => {
-  const { isAuthenticated, isAdmin, deleteProject } = useAuth();
-  let location = useLocation();
-  const isAdminLoggedIn = isAdmin;
-  const signedUser = localStorage.getItem("user");
-  const {_id: adminId} = JSON.parse(signedUser);
+  const { isAuthenticated, deleteProject } = useAuth();
+  // let location = useLocation();
 
-  const onDeleteBtn = (id, adminId) => {
-    // alert(`Are you sure you want to delete this project   ${id} ??`);
-    // write a function to delete project with specific id
- 
-    console.log("ID >>>", id);
-    console.log("USER ID >>>", adminId);
-    deleteProject(id, adminId);
-  };
+  // console.log(location);
+  // const onDeleteBtn = (id, adminId) => {
+  //   alert(`Are you sure you want to delete this project   ${id} ??`);
+  // };
+  // const signedUser = localStorage.getItem("user")
+  //   ? JSON.parse(localStorage.getItem("user"))
+  //   : {};
+
+  // const onDeleteBtn = (id, user) => {
+  //   console.log("ID >>>", id);
+  //   console.log("USER ID >>>", signedUser);
+  //   deleteProject(id, signedUser)
+  //   // alert("alert")
+  // };
 
   return (
     <div className="container-column">
@@ -26,27 +29,33 @@ const Iframes = ({ projects }) => {
           {isAuthenticated
             ? projects.map(({ _id, url, description, title }) => {
                 return (
-                  <div className="iFrameLinkContainer">
-                    <button onClick={onDeleteBtn(_id)} className="btn-del">
-                      X
-                    </button>
-                    <Link to={`/singleProject/${url.split("/")[4]}`} key={_id}>
-                      <div className="color3">
-                        <div className="container-column ">
-                          <h1 className="projectTitle">Title: {title}</h1>
-                          <iframe
-                            className="thumbnail"
-                            id="allFrames"
-                            title="game"
-                            src={`https://scratch.mit.edu/projects/${
-                              url.split("/")[4]
-                            }/embed`}
-                          ></iframe>
-                          <h1 className="projectDescription">{description}</h1>
-                        </div>
+                  <Link
+                    to={`/singleProject/${url.split("/")[4]}`}
+                    state={{ id: _id }}
+                    key={_id}
+                  >
+                    <div className="color3">
+                      <div className="container-column ">
+                      {/* <button
+                        type="button"
+                        onClick={onDeleteBtn(_id)}
+                        className="btn-del"
+                      >
+                        X
+                      </button> */}
+                        <h1 className="projectTitle">Title: {title}</h1>
+                        <iframe
+                          className="thumbnail"
+                          id="allFrames"
+                          title="game"
+                          src={`https://scratch.mit.edu/projects/${
+                            url.split("/")[4]
+                          }/embed`}
+                        ></iframe>
+                        <h1 className="projectDescription">{description}</h1>
                       </div>
-                    </Link>
-                  </div>
+                    </div>
+                  </Link>
                 );
               })
             : projects.slice(0, 3).map(({ _id, url, description, title }) => {

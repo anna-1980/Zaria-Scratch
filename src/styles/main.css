@@ -288,6 +288,14 @@ button {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 100;
+}
+
+.btn-del:hover {
+  background-color: #ea5436;
+  -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .bouncer div {
@@ -714,6 +722,48 @@ div {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;
+}
+
+.projects-list {
+  width: 100%;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #36385f;
+}
+
+.projects-list__item {
+  position: relative;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+  background-color: #4c4d6e;
+}
+
+.projects-list .btn-list-del {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  background-color: red;
+}
+
+.projects-list .btn-list-del:hover {
+  background-color: #ea5436;
+  -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .logo {

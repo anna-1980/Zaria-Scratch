@@ -20,21 +20,21 @@ import NewProfilePicture from "./components/new-profile-picture-component/NewPro
 function App() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  const getProjects = async () => {
+    try {
+      // const { data } = await axios.get("http://localhost:5000/api/projects/");
+      const { data } = await axios.get(
+        "https://sleepy-sea-73067.herokuapp.com/api/projects"
+      );
+      setLoading(true);
+      setProjects(data);
+      setLoading(false);
+    } catch (error) {
+      return alert("Sorry something went wrong getting the projects");
+    }
+  };
   useEffect(() => {
-    const getProjects = async () => {
-      try {
-        // const { data } = await axios.get("http://localhost:5000/api/projects/");
-        const { data } = await axios.get(
-          "https://sleepy-sea-73067.herokuapp.com/api/projects"
-        );
-        setLoading(true);
-        setProjects(data);
-        setLoading(false);
-      } catch (error) {
-        return alert("Sorry something went wrong getting the projects");
-      }
-    };
+   
     getProjects();
   }, [projects]);
 
@@ -74,7 +74,7 @@ function App() {
             <Route path="/signin" element={<LoginScreen />} />
             <Route path="/register" element={<RegisterScreen />} />
             {/* //-------protected route -------// */}
-            <Route path="/userProfile" element={<UserProfile />}>
+            <Route path="/userProfile" element={<UserProfile projects={projects}/>}>
               <Route path="/userProfile/upload" element={<NewProject />} />
               {/* <Route path='/userProfile/uploadimg' element={<NewProfilePicture />}/> */}
             </Route>
