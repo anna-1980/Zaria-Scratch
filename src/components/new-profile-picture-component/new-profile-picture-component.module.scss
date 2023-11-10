@@ -1,0 +1,11 @@
+.form-container{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  &__paragraph{
+    text-decoration: none;
+    font-size: 2rem;
+    background-color: red;
+  }
+}

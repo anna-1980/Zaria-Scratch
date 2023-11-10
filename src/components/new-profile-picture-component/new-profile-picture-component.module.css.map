@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAA;EACb,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,gBAAgB,EAAE,KAAK;CAOxB;;AALE,AAAD,0BAAY,CAAA;EACV,eAAe,EAAE,IAAI;EACrB,SAAS,EAAE,IAAI;EACf,gBAAgB,EAAE,GAAG;CACtB",
+    "sources": [
+        "new-profile-picture-component.module.scss"
+    ],
+    "names": [],
+    "file": "new-profile-picture-component.module.css"
+}
